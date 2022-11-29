@@ -1,9 +1,12 @@
 import React from 'react';
-import styles from '../../styles/ThemeSwitcher.module.css';
+import styles from './style.module.scss';
 const ThemeSwitcher = () => {
   return (
     <div>
-      <input className={styles.switch} type="checkbox" role="switch"></input>
+      <label className={styles.switch} htmlFor="theme-switcher">
+        <input type="checkbox" role="switch" id="theme-switcher"></input>
+        <span className={styles.slider}></span>
+      </label>
     </div>
   );
 };
