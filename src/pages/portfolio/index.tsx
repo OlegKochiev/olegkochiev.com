@@ -1,3 +1,11 @@
-export default function Portfolio() {
-  return <div>My Portfolio page</div>;
-}
+import ThemeSwitcher from '../../components/ThemeSwitcher';
+
+const Portfolio = () => {
+  return (
+    <div>
+      My Portfolio page
+      <ThemeSwitcher />
+    </div>
+  );
+};
+export default Portfolio;
