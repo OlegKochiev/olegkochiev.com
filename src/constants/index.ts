@@ -1,7 +1,7 @@
 const PATHS = {
-  HOME: '/',
-  PORTFOLIO: '/portfolio',
-  ABOUT_ME: '/about-me',
+  HOME: () => '/',
+  PORTFOLIO: () => '/portfolio',
+  ABOUT_ME: () => '/about-me',
 };
 
 export {PATHS};

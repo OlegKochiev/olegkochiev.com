@@ -29,9 +29,9 @@ export default function Home() {
             <h1 className={styles.my_name}>Олег Кочиев</h1>
             <div>
               <nav className={styles.navigation}>
-                <Link href={PATHS.HOME}>Главная</Link>
-                <Link href={PATHS.ABOUT_ME}>Обо мне</Link>
-                <Link href={PATHS.PORTFOLIO}>Портфолио</Link>
+                <Link href={PATHS.HOME()}>Главная</Link>
+                <Link href={PATHS.ABOUT_ME()}>Обо мне</Link>
+                <Link href={PATHS.PORTFOLIO()}>Портфолио</Link>
               </nav>
             </div>
           </div>
