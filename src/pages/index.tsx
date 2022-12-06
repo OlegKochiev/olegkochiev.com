@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from '../styles/style.module.scss';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import Link from 'next/link';
+import SocialIcons from '../components/SocialIcons';
 
 export default function Home() {
   return (
@@ -35,28 +36,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <ul className={styles.social}>
-          <li className={styles.social_item}>
-            <Link href="#">
-              <img alt="social github" src="/github.svg" />
-            </Link>
-          </li>
-          <li className={styles.social_item}>
-            <Link href="#">
-              <img alt="social linkedIn" src="/linkedin.svg" />
-            </Link>
-          </li>
-          <li className={styles.social_item}>
-            <Link href="#">
-              <img alt="social hh.ru" src="/hh.ru.svg" />
-            </Link>
-          </li>
-          <li className={styles.social_item}>
-            <Link href="#">
-              <img alt="social vkontakte" src="/vk.svg" />
-            </Link>
-          </li>
-        </ul>
+        <SocialIcons />
       </main>
     </div>
   );
