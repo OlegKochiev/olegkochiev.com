@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useState} from 'react';
+import React, {Fragment, useContext, useEffect, useState} from 'react';
 import {ThemeContext} from 'styled-components';
 import {THEME} from '../../constants';
 import {Theme} from '../../types';
