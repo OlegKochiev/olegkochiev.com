@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Ul = styled.ul`
   display: flex;
   gap: 0.5em;
+  background-color: ${({theme}) => theme.theme.backgroundColor};
 `;
 
 const Li = styled.li`
@@ -39,10 +40,10 @@ const SocialIcons = () => {
   return (
     <Ul>
       {socialLinks.map((link) => (
-        <Li>
-          <Link href={link.href}>
+        <Li key={link.name}>
+          <a href={link.href}>
             <img alt={link.name} src={link.imgSrc} />
-          </Link>
+          </a>
         </Li>
       ))}
     </Ul>
