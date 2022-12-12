@@ -39,7 +39,7 @@ const SocialIcons = () => {
   return (
     <Ul>
       {socialLinks.map((link) => (
-        <Li>
+        <Li key={link.name}>
           <Link href={link.href}>
             <img alt={link.name} src={link.imgSrc} />
           </Link>
