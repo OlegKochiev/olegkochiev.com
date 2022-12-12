@@ -1,9 +1,15 @@
-import React, {Fragment, useContext, useEffect, useState} from 'react';
-import {ThemeContext} from 'styled-components';
+import {useContext} from 'react';
+import styled, {ThemeContext} from 'styled-components';
 import {THEME} from '../../constants';
 import {Theme} from '../../types';
+
 import styles from './style.module.scss';
-const ThemeSwitcher = () => {
+
+const ThemedSwitcher = styled.div`
+  align-self: ${({alignSelf}) => alignSelf};
+`;
+
+const ThemeSwitcher = ({alignSelf = 'center'}: {alignSelf: string}) => {
   const {theme, setTheme} = useContext(ThemeContext);
 
   const handleToggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -13,12 +19,12 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <Fragment>
+    <ThemedSwitcher alignSelf={alignSelf}>
       <label className={styles.switch} htmlFor="theme-switcher">
         <input onChange={handleToggleTheme} type="checkbox" role="switch" id="theme-switcher"></input>
         <span className={styles.slider}></span>
       </label>
-    </Fragment>
+    </ThemedSwitcher>
   );
 };
 

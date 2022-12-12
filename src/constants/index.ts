@@ -6,12 +6,14 @@ const PATHS = {
 
 export const THEME = {
   DARK: {
-    backgroundColor: '#000',
-    color: '#fff',
+    backgroundColor: '#202627',
+    color: '#bbb',
+    lineColor: '#404040',
   },
   LIGHT: {
-    backgroundColor: '#fff',
+    backgroundColor: '#faf5f5',
     color: '#000',
+    lineColor: '#a0a0a0',
   },
 };
 
