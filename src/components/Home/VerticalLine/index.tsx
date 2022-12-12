@@ -5,6 +5,7 @@ const Line = styled.div`
   width: 1px;
   height: 80%;
   background-color: ${({theme}) => theme.theme.lineColor};
+  transition: background-color 0.25s;
 `;
 
 const VerticalLine = () => {

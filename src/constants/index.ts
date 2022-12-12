@@ -11,7 +11,7 @@ export const THEME = {
     lineColor: '#404040',
   },
   LIGHT: {
-    backgroundColor: '#faf5f5',
+    backgroundColor: '#fafcff',
     color: '#000',
     lineColor: '#a0a0a0',
   },

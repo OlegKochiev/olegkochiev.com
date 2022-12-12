@@ -5,6 +5,7 @@ type ThemeSwitcher = {
 export interface Theme {
   backgroundColor: string;
   color: string;
+  lineColor: string;
 }
 
 export type {ThemeSwitcher};

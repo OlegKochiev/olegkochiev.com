@@ -5,10 +5,7 @@ import SocialIcons from '../components/Home/SocialIcons';
 import {PATHS, THEME} from '../constants';
 import {Theme} from '../types';
 
-import Image from 'next/image';
 import Head from 'next/head';
-import Link from 'next/link';
-import {useRouter} from 'next/router';
 import styled, {ThemeContext} from 'styled-components';
 
 import styles from '../styles/style.module.scss';
@@ -54,7 +51,6 @@ const MyName = styled.h1`
 
 export default function Home() {
   const [theme, setTheme] = useState<Theme>(THEME.LIGHT);
-  const router = useRouter();
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
       <Head>
