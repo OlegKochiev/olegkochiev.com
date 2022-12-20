@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import NavLinks from '../components/Home/NavLinks';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import SocialIcons from '../components/Home/SocialIcons';
@@ -12,13 +12,6 @@ import styles from '../styles/style.module.scss';
 import VerticalLine from '../components/Home/VerticalLine';
 import MyImage from '../components/Home/MyImage';
 import {homePageDatas} from '../data/home';
-
-const Main = styled.main`
-  height: 100vh;
-  background-color: ${({theme}) => theme.theme.backgroundColor};
-  color: ${({theme}) => theme.theme.color};
-  transition: color 0.25s, background-color 0.25s;
-`;
 
 const Container = styled.div`
   display: flex;
@@ -52,24 +45,19 @@ const MyName = styled.h1`
 export default function Home() {
   const [theme, setTheme] = useState<Theme>(THEME.LIGHT);
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
-      <Head>
-        <title>Олег Кочиев | Сайт Портфолио</title>
-      </Head>
-      <Main>
-        <Container>
-          <ThemeSwitcher alignSelf={'flex-end'} />
-          <Info>
-            <MyImage />
-            <VerticalLine />
-            <UserInfo>
-              <MyName>{homePageDatas.myName}</MyName>
-              <NavLinks />
-            </UserInfo>
-          </Info>
-          <SocialIcons />
-        </Container>
-      </Main>
-    </ThemeContext.Provider>
+    <React.Fragment>
+      <Container>
+        <ThemeSwitcher alignSelf={'flex-end'} />
+        <Info>
+          <MyImage />
+          <VerticalLine />
+          <UserInfo>
+            <MyName>{homePageDatas.myName}</MyName>
+            <NavLinks />
+          </UserInfo>
+        </Info>
+        <SocialIcons />
+      </Container>
+    </React.Fragment>
   );
 }

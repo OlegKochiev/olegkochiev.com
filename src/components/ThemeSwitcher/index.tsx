@@ -6,14 +6,14 @@ import {Theme} from '../../types';
 import styles from './style.module.scss';
 
 const ThemedSwitcher = styled.div`
-  align-self: ${({alignSelf}) => alignSelf};
+  align-self: ${(props) => props.alignSelf};
 `;
 
 const ThemeSwitcher = ({alignSelf = 'center'}: {alignSelf: string}) => {
   const {theme, setTheme} = useContext(ThemeContext);
 
   const handleToggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const isChecked = e.target.checked;
+    const isChecked = e?.target?.checked;
     const selectedTheme = isChecked ? THEME.LIGHT : THEME.DARK;
     setTheme(selectedTheme);
   };

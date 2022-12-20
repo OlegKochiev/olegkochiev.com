@@ -4,7 +4,7 @@ const Portfolio = () => {
   return (
     <div>
       My Portfolio page
-      <ThemeSwitcher />
+      <ThemeSwitcher alignSelf={'flex-end'} />
     </div>
   );
 };
