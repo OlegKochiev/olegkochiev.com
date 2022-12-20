@@ -21,7 +21,13 @@ const ThemeSwitcher = ({alignSelf = 'center'}: {alignSelf: string}) => {
   return (
     <ThemedSwitcher alignSelf={alignSelf}>
       <label className={styles.switch} htmlFor="theme-switcher">
-        <input onChange={handleToggleTheme} type="checkbox" role="switch" id="theme-switcher"></input>
+        <input
+          checked={theme === THEME.LIGHT ? true : false}
+          onChange={handleToggleTheme}
+          type="checkbox"
+          role="switch"
+          id="theme-switcher"
+        ></input>
         <span className={styles.slider}></span>
       </label>
     </ThemedSwitcher>
