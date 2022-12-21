@@ -12,6 +12,7 @@ import styles from '../styles/style.module.scss';
 import VerticalLine from '../components/Home/VerticalLine';
 import MyImage from '../components/Home/MyImage';
 import {homePageDatas} from '../data/home';
+import ThemeSwitcher2 from '../components/ThemeSwitcher2';
 
 const Container = styled.div`
   display: flex;
@@ -54,6 +55,7 @@ export default function Home() {
           <UserInfo>
             <MyName>{homePageDatas.myName}</MyName>
             <NavLinks />
+            <ThemeSwitcher2 />
           </UserInfo>
         </Info>
         <SocialIcons />

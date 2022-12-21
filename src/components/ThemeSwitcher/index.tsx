@@ -1,7 +1,7 @@
 import {useContext} from 'react';
-import styled, {ThemeContext} from 'styled-components';
 import {THEME} from '../../constants';
 import {Theme} from '../../types';
+import styled, {ThemeContext} from 'styled-components';
 
 import styles from './style.module.scss';
 
