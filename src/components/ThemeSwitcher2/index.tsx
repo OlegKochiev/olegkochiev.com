@@ -82,12 +82,17 @@ const Input = styled.input`
   }
 `;
 
+const Container = styled.div`
+  display: flex;
+  height: 20px;
+`;
+
 const ThemeSwitcher2 = () => {
   const inputClickHandler = (e) => {
     console.log(e.target.checked);
   };
   return (
-    <div>
+    <Container>
       <Input onClick={inputClickHandler} id="theme-switch" type="checkbox" />
       <Label htmlFor="theme-switch">
         <Track />
@@ -96,7 +101,7 @@ const ThemeSwitcher2 = () => {
           <Moon />
         </Control>
       </Label>
-    </div>
+    </Container>
   );
 };
 
