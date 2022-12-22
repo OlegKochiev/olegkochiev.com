@@ -4,7 +4,7 @@ const PATHS = {
   ABOUT_ME: () => '/about-me',
 };
 
-export const THEME = {
+const THEME = {
   DARK: {
     backgroundColor: '#202627',
     color: '#bbb',
@@ -17,4 +17,4 @@ export const THEME = {
   },
 };
 
-export {PATHS};
+export {PATHS, THEME};

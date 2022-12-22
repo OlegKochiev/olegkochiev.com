@@ -7,22 +7,22 @@ export const homePageDatas = {
 export const socialIconsDatas = [
   {
     name: 'github',
-    href: 'wwww.github.com/olegkochiev',
+    href: 'https://www.github.com/olegkochiev',
     imgSrc: '/github.svg',
   },
   {
     name: 'linkedIn',
-    href: 'wwww.linkedin.com',
+    href: 'https://www.linkedin.com',
     imgSrc: '/linkedin.svg',
   },
   {
     name: 'hh.ru',
-    href: 'wwww.hh.ru',
+    href: 'https://www.hh.ru',
     imgSrc: '/hh.ru.svg',
   },
   {
     name: 'vkontakte',
-    href: 'wwww.vk.com',
+    href: 'https://www.vk.com',
     imgSrc: '/vk.svg',
   },
 ];

@@ -16,11 +16,11 @@ const Li = styled.li`
 const SocialIcons = () => {
   return (
     <Ul>
-      {socialIconsDatas.map((link) => (
-        <Li key={link.name}>
-          <a href={link.href}>
-            <img alt={link.name} src={link.imgSrc} />
-          </a>
+      {socialIconsDatas.map(({name, href, imgSrc}) => (
+        <Li key={name}>
+          <Link href={href}>
+            <img alt={name} src={imgSrc} />
+          </Link>
         </Li>
       ))}
     </Ul>
