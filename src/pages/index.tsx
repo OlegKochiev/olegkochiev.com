@@ -39,6 +39,7 @@ const UserInfo = styled.div`
 `;
 
 const MyName = styled.h1`
+  padding: 0 2px;
   font-size: 22px;
   font-weight: bold;
 `;
@@ -49,7 +50,6 @@ export default function Home() {
     <React.Fragment>
       <Container>
         <ThemeSwitcher />
-        {/* <ThemeSwitcher alignSelf={'flex-end'} /> */}
         <Info>
           <MyImage />
           <VerticalLine />

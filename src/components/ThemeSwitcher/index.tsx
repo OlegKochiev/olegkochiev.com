@@ -30,7 +30,7 @@ const Sun = styled(Icon)`
 `;
 
 const Moon = styled(Icon)`
-  mask-image: url('/icons/moon.svg');
+  mask-image: url('/icons/moon2.svg');
   transform: translate(-50%, 200%);
 `;
 
@@ -38,8 +38,8 @@ const Control = styled.div`
   display: flex;
   position: absolute;
   overflow: hidden;
-  width: 21px;
-  height: 21px;
+  width: 22px;
+  height: 22px;
   border-radius: 100%;
   background-color: #fff;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -51,7 +51,7 @@ const Control = styled.div`
 const Track = styled.div`
   display: flex;
   position: absolute;
-  width: 38px;
+  width: 36px;
   height: 18px;
   border-radius: 100px;
   background-color: #dadada;
@@ -69,7 +69,7 @@ const Input = styled.input`
   display: none;
   &:checked + ${Label} {
     & ${Control} {
-      transform: translateX(17px);
+      transform: translateX(15px);
       background-color: #6f6f6f;
     }
     & ${Sun} {
@@ -83,7 +83,7 @@ const Input = styled.input`
 
 const Container = styled.div`
   display: flex;
-  height: 21px;
+  height: 22px;
 `;
 
 const ThemeSwitcher = () => {
