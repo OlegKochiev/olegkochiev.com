@@ -38,7 +38,7 @@ const UserInfo = styled.div`
   gap: 1em;
 `;
 
-const MyName = styled.h1`
+export const MyName = styled.h1`
   padding: 0 2px;
   font-size: 22px;
   font-weight: bold;

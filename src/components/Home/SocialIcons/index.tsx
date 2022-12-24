@@ -12,15 +12,19 @@ const Social = styled.span`
   mask-repeat: no-repeat;
   mask-position: center;
   mask-image: url(${({iconSrc}) => iconSrc});
-  transition: background-color 0.25s;
+  transition: background-color 0.25s, transform 0.1s;
+
   &:hover {
+    transform: scale(1.1);
     background-color: ${({bgColor}) => bgColor};
   }
 `;
 
 const Ul = styled.ul`
   display: flex;
-  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 `;
 
 const Li = styled.li`
