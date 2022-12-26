@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
+import {PATHS} from '../../constants';
 import {homePageDatas} from '../../data/home';
 import {MyName} from '../../pages';
 import NavLinks from '../Home/NavLinks';
@@ -14,7 +16,9 @@ const Container = styled.div`
 const Header = () => {
   return (
     <Container>
-      <MyName>{homePageDatas.myName}</MyName>
+      <Link href={PATHS.HOME()}>
+        <MyName>{homePageDatas.myName}</MyName>
+      </Link>
       <NavLinks />
       <ThemeSwitcher />
     </Container>

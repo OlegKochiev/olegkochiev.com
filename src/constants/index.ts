@@ -2,6 +2,7 @@ const PATHS = {
   HOME: () => '/',
   PORTFOLIO: () => '/portfolio',
   ABOUT_ME: () => '/about-me',
+  EDUCATION: () => '/education',
 };
 
 const THEME = {
