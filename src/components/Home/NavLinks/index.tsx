@@ -29,11 +29,11 @@ const NavLinks = () => {
       <Link href={PATHS.HOME()}>
         <Span isActive={router.pathname === PATHS.HOME()}>Главная</Span>
       </Link>
-      <Link href={PATHS.ABOUT_ME()}>
-        <Span isActive={router.pathname === PATHS.ABOUT_ME()}>Обо мне</Span>
-      </Link>
       <Link href={PATHS.PORTFOLIO()}>
         <Span isActive={router.pathname === PATHS.PORTFOLIO()}>Портфолио</Span>
+      </Link>
+      <Link href={PATHS.ABOUT_ME()}>
+        <Span isActive={router.pathname === PATHS.ABOUT_ME()}>Обо мне</Span>
       </Link>
     </Nav>
   );
