@@ -37,7 +37,7 @@ const SocialIcons = () => {
     <Ul>
       {socialIconsDatas.map(({name, href, imgSrc, bgColor}) => (
         <Li key={name}>
-          <Link href={href}>
+          <Link href={href} target="_blank">
             <Social iconSrc={imgSrc} bgColor={bgColor} />
           </Link>
         </Li>

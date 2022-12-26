@@ -26,7 +26,7 @@ const NavLinks = () => {
 
   return (
     <Nav>
-      <Link href={PATHS.HOME()}>
+      <Link href={PATHS.HOME()} hidden={router.pathname === PATHS.HOME() ? true : false}>
         <Span isActive={router.pathname === PATHS.HOME()}>Главная</Span>
       </Link>
       <Link href={PATHS.PORTFOLIO()}>
