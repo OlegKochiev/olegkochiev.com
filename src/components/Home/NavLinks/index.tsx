@@ -11,7 +11,7 @@ const Nav = styled.nav`
 
 const Span = styled.span`
   display: block;
-  padding: 0 5px;
+  padding: 5px 5px;
   transition: background-color 0.15s, transform 0.15s;
   border-bottom: ${({isActive}) => (isActive ? '3px solid #078080' : 'none')};
   &:hover {
@@ -21,20 +21,38 @@ const Span = styled.span`
   }
 `;
 
-const NavLinks = () => {
+const navLinksData = [
+  {
+    path: PATHS.HOME(),
+    title: 'Главная',
+  },
+  {
+    path: PATHS.PORTFOLIO(),
+    title: 'Портфолио',
+  },
+  {
+    path: PATHS.ABOUT_ME(),
+    title: 'Обо мне',
+  },
+];
+
+const NavLink = ({title, path}) => {
   const router = useRouter();
+  const isActive = router.pathname === path;
 
   return (
+    <Link href={path} hidden={router.pathname === path && path === PATHS.HOME()}>
+      <Span isActive={isActive}>{title}</Span>
+    </Link>
+  );
+};
+
+const NavLinks = () => {
+  return (
     <Nav>
-      <Link href={PATHS.HOME()} hidden={router.pathname === PATHS.HOME() ? true : false}>
-        <Span isActive={router.pathname === PATHS.HOME()}>Главная</Span>
-      </Link>
-      <Link href={PATHS.PORTFOLIO()}>
-        <Span isActive={router.pathname === PATHS.PORTFOLIO()}>Портфолио</Span>
-      </Link>
-      <Link href={PATHS.ABOUT_ME()}>
-        <Span isActive={router.pathname === PATHS.ABOUT_ME()}>Обо мне</Span>
-      </Link>
+      {navLinksData.map((link) => (
+        <NavLink path={link.path} title={link.title} />
+      ))}
     </Nav>
   );
 };
