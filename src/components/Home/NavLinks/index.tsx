@@ -31,7 +31,7 @@ const navLinksData = [
     title: 'Образование',
   },
   {
-    path: PATHS.PORTFOLIO(),
+    path: PATHS.PORTFOLIO.ALL(),
     title: 'Портфолио',
   },
   {

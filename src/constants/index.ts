@@ -1,6 +1,10 @@
 const PATHS = {
   HOME: () => '/',
-  PORTFOLIO: () => '/portfolio',
+  PORTFOLIO: {
+    ALL: () => '/portfolio',
+    BY_NAME: (name) => `/portfolio/[${name}]`,
+    BY_TAG: (tag) => `/portfolio/tag/${tag}`,
+  },
   ABOUT_ME: () => '/about-me',
   EDUCATION: () => '/education',
 };
