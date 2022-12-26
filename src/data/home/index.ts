@@ -27,6 +27,6 @@ export const socialIconsDatas = [
     name: 'vkontakte',
     href: 'https://www.vk.com',
     imgSrc: '/vk.svg',
-    bgColor: '#0077ff',
+    bgColor: '#07f',
   },
 ];
