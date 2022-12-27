@@ -1,14 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import Header from '../../components/Header';
-const Container = styled.div`
-  padding: 20px 15px;
-`;
+import PageContainer from '../../components/PageContainer';
+
 const EducationPage = () => {
   return (
-    <Container>
+    <PageContainer>
       <Header />
-    </Container>
+    </PageContainer>
   );
 };
 

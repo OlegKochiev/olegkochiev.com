@@ -1,7 +1,8 @@
 import React from 'react';
+import PageContainer from '../../../components/PageContainer';
 
 const ProjectPage = () => {
-  return <div></div>;
+  return <PageContainer></PageContainer>;
 };
 
 export default ProjectPage;

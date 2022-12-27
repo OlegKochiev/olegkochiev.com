@@ -1,14 +1,13 @@
-import styled from 'styled-components';
+import React from 'react';
 import Header from '../../components/Header';
-import ThemeSwitcher from '../../components/ThemeSwitcher';
-const Container = styled.div`
-  padding: 20px 15px;
-`;
+import PageContainer from '../../components/PageContainer';
+
 const Portfolio = () => {
   return (
-    <Container>
+    <PageContainer>
       <Header />
-    </Container>
+    </PageContainer>
   );
 };
+
 export default Portfolio;
