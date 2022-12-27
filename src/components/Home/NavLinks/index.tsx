@@ -55,7 +55,7 @@ const NavLinks = () => {
   return (
     <Nav>
       {navLinksData.map((link) => (
-        <NavLink path={link.path} title={link.title} />
+        <NavLink key={link.title} path={link.path} title={link.title} />
       ))}
     </Nav>
   );
