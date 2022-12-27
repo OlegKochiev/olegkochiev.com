@@ -27,12 +27,12 @@ const navLinksData = [
     title: 'Главная',
   },
   {
-    path: PATHS.EDUCATION(),
-    title: 'Образование',
-  },
-  {
     path: PATHS.PORTFOLIO.ALL(),
     title: 'Портфолио',
+  },
+  {
+    path: PATHS.EDUCATION(),
+    title: 'Образование',
   },
   {
     path: PATHS.ABOUT_ME(),
