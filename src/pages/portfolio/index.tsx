@@ -8,59 +8,117 @@ import {PATHS} from '../../constants';
 const projects = [
   {
     tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио',
+    title: 'Создание собственного сайта портфолио5',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
     data: '01.01.2023',
     stackTechnologies: [],
   },
   {
     tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио',
+    title: 'Создание собственного сайта портфолио8',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
+    data: '01.01.2022',
+    stackTechnologies: [],
+  },
+  {
+    tags: ['react', 'next.js'],
+    title: 'Создание собственного сайта портфолио1',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
     data: '01.01.2023',
     stackTechnologies: [],
   },
   {
     tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио',
-    data: '01.01.2023',
+    title: 'Создание собственного сайта портфолио2',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos hic fugiat dolore totam numquam eum inventore dolores commodi nulla.',
+    data: '01.01.2021',
+    stackTechnologies: [],
+  },
+  {
+    tags: ['react', 'next.js'],
+    title: 'Создание собственного сайта портфолио3',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
+    data: '01.01.2021',
     stackTechnologies: [],
   },
 ];
 
-const Main = styled.main``;
-const Section = styled.section``;
-const Article = styled.article`
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+`;
+const Section = styled.section`
   display: grid;
   grid-template-columns: 120px 550px;
   grid-gap: 30px;
 `;
+const Year = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+const ProjectsContainer = styled.div``;
+const Article = styled.article`
+  margin-bottom: 30px;
+`;
 const Tags = styled.div`
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 `;
 const Tag = styled.div`
   font-size: 14px;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-color: inherit;
+  }
 `;
-const Title = styled.div``;
-const Description = styled.div``;
+const Title = styled.h2`
+  margin-bottom: 5px;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-color: inherit;
+  }
+`;
+const Description = styled.h3`
+  font-size: 15px;
+`;
 
 const Portfolio = () => {
+  let projectsByYear = {};
+  projects.forEach((project) => {
+    if (!projectsByYear[project.data]) projectsByYear[project.data] = [];
+    projectsByYear[project.data].push(project);
+  });
+
+  const projectsByData = Object.entries(projectsByYear);
+
   return (
     <PageContainer>
       <Header />
       <Main>
-        {projects.map((project) => (
-          <Section>
-            <Article>
-              <Tags>
-                {project.tags.map((tag) => (
-                  <Link href={PATHS.PORTFOLIO.BY_TAG(tag)}>
-                    <Tag>#{tag}</Tag>
+        {projectsByData.map(([year, projects]) => (
+          <Section key={year}>
+            <Year>{year}</Year>
+            <ProjectsContainer>
+              {projects.map((project) => (
+                <Article key={project.title}>
+                  <Tags>
+                    {project.tags.map((tag) => (
+                      <Link key={tag} href={PATHS.PORTFOLIO.BY_TAG(tag)}>
+                        <Tag>#{tag}</Tag>
+                      </Link>
+                    ))}
+                  </Tags>
+                  <Link href={PATHS.PORTFOLIO.BY_NAME(project.title)}>
+                    <Title>{project.title}</Title>
                   </Link>
-                ))}
-              </Tags>
-              <Title></Title>
-              <Description></Description>
-            </Article>
+                  <Description>{project.description}</Description>
+                </Article>
+              ))}
+            </ProjectsContainer>
           </Section>
         ))}
       </Main>
