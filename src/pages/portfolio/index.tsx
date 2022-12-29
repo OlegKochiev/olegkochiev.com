@@ -61,6 +61,10 @@ const Year = styled.div`
 `;
 const ProjectsContainer = styled.div``;
 const Article = styled.article`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
   margin-bottom: 30px;
 `;
 const Tags = styled.div`
@@ -76,7 +80,6 @@ const Tag = styled.div`
   }
 `;
 const Title = styled.h2`
-  margin-bottom: 5px;
   border-bottom: 1px solid transparent;
   &:hover {
     border-color: inherit;
