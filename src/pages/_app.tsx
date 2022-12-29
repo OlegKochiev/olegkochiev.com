@@ -4,6 +4,7 @@ import styled, {ThemeContext} from 'styled-components';
 import {THEME} from '../constants';
 import React, {useState} from 'react';
 import Head from 'next/head';
+import {Theme} from '../types';
 
 const Main = styled.main`
   height: 100vh;

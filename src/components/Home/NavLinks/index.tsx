@@ -9,7 +9,7 @@ const Nav = styled.nav`
   gap: 1em;
 `;
 
-const Span = styled.span`
+const Span = styled.span<{isActive: boolean}>`
   display: block;
   padding: 5px 5px;
   transition: background-color 0.15s, transform 0.15s;
@@ -40,7 +40,7 @@ const navLinksData = [
   },
 ];
 
-const NavLink = ({title, path}) => {
+const NavLink = ({title, path}: {title: string; path: string}) => {
   const router = useRouter();
   const isActive = router.pathname === path;
 
