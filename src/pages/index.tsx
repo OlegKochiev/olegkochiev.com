@@ -47,19 +47,17 @@ export const MyName = styled.h1`
 export default function Home() {
   const [theme, setTheme] = useState<Theme>(THEME.LIGHT);
   return (
-    <React.Fragment>
-      <Container>
-        <ThemeSwitcher />
-        <Info>
-          <MyImage />
-          <VerticalLine />
-          <UserInfo>
-            <MyName>{homePageDatas.myName}</MyName>
-            <NavLinks />
-          </UserInfo>
-        </Info>
-        <SocialIcons />
-      </Container>
-    </React.Fragment>
+    <Container>
+      <ThemeSwitcher />
+      <Info>
+        <MyImage />
+        <VerticalLine />
+        <UserInfo>
+          <MyName>{homePageDatas.myName}</MyName>
+          <NavLinks />
+        </UserInfo>
+      </Info>
+      <SocialIcons />
+    </Container>
   );
 }
