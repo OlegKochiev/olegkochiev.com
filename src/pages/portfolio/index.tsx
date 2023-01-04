@@ -44,20 +44,19 @@ const projects = [
   },
 ];
 
-const Main = styled.main`
+export const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 `;
-const Section = styled.section`
+export const Section = styled.section`
   display: grid;
-  grid-template-columns: 120px 550px;
+  grid-template-columns: 170px 550px;
   grid-gap: 30px;
 `;
 const Year = styled.div`
-  display: flex;
-  justify-content: flex-end;
+  text-align: end;
 `;
 const ProjectsContainer = styled.div``;
 const Article = styled.article`

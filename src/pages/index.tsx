@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import NavLinks from '../components/Home/NavLinks';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import SocialIcons from '../components/Home/SocialIcons';
