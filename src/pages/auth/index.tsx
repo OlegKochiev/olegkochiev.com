@@ -2,7 +2,7 @@ import React from 'react';
 import FormField from '../../components/Auth/FormField';
 import {useForm, FormProvider} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
-import LoginFormSchema from '../../utils/schemas/loginValidation';
+import AuthFormSchema from '../../utils/schemas/AuthValidation';
 import styled from 'styled-components';
 
 interface ILoginFormInputs {
@@ -55,7 +55,7 @@ const Button = styled.button.attrs({
 
 const Auth = () => {
   const form = useForm<ILoginFormInputs>({
-    resolver: yupResolver(LoginFormSchema),
+    resolver: yupResolver(AuthFormSchema),
   });
 
   const onSubmit = (data: ILoginFormInputs) => console.log(data);

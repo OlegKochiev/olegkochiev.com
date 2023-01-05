@@ -43,7 +43,6 @@ const FormField: React.FC<IFormFieldProps> = ({name, fieldType, title}) => {
     register,
     formState: {errors},
   } = useFormContext();
-  console.log(errors);
 
   return (
     <Label>
