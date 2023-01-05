@@ -22,4 +22,11 @@ const THEME = {
   },
 };
 
-export {PATHS, THEME};
+const ERRORS = {
+  FIELD: {
+    IS_REQUIRED: 'Это поле обязательно для заполнения!',
+    LENGTH: 'Колчичество введенных символов должно быть не менее 6!',
+  },
+};
+
+export {PATHS, THEME, ERRORS};

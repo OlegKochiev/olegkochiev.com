@@ -1,6 +1,14 @@
-import React, {useContext} from 'react';
-import styled, {ThemeContext} from 'styled-components';
-import Header from '../../components/Header';
+import React from 'react';
+import FormField from '../../components/Auth/FormField';
+import {useForm, FormProvider} from 'react-hook-form';
+import {yupResolver} from '@hookform/resolvers/yup';
+import LoginFormSchema from '../../utils/schemas/loginValidation';
+import styled from 'styled-components';
+
+interface ILoginFormInputs {
+  login: string;
+  password: string;
+}
 
 const Container = styled.div`
   display: flex;
@@ -8,6 +16,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  background-color: inherit;
 `;
 
 const Form = styled.form`
@@ -26,31 +35,6 @@ const Title = styled.h1`
   align-self: center;
 `;
 
-const Input = styled.input`
-  width: 100%;
-  height: 40px;
-  margin-top: 5px;
-  padding: 5px 10px;
-  font-size: 14px;
-  color: inherit;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-`;
-
-const Login = styled(Input).attrs({
-  type: 'text',
-})``;
-
-const Password = styled(Input).attrs({
-  type: 'password',
-})``;
-
-const Label = styled.label`
-  width: 100%;
-  font-size: 11px;
-  text-transform: uppercase;
-`;
-
 const Button = styled.button.attrs({
   type: 'submit',
 })`
@@ -58,32 +42,35 @@ const Button = styled.button.attrs({
   width: 80px;
   height: 30px;
   background-color: #ccc;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.1s, color 0.1s;
+  outline: transparent;
   &:hover {
     color: white;
     background-color: #078080;
   }
+  &:focus {
+    outline: 1px solid #078080;
+  }
 `;
 
 const Auth = () => {
+  const form = useForm<ILoginFormInputs>({
+    resolver: yupResolver(LoginFormSchema),
+  });
+
+  const onSubmit = (data: ILoginFormInputs) => console.log(data);
+
   return (
-    <React.Fragment>
-      <Header />
-      <Container>
-        <Form>
+    <Container>
+      <FormProvider {...form}>
+        <Form onSubmit={form.handleSubmit(onSubmit)}>
           <Title>Авторизация</Title>
-          <Label>
-            Логин
-            <Login />
-          </Label>
-          <Label>
-            Пароль
-            <Password />
-          </Label>
+          <FormField name="login" fieldType="text" title="Логин" />
+          <FormField name="password" fieldType="password" title="Пароль" />
           <Button>Войти</Button>
         </Form>
-      </Container>
-    </React.Fragment>
+      </FormProvider>
+    </Container>
   );
 };
 
