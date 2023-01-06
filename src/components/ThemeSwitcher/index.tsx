@@ -78,6 +78,9 @@ const Input = styled.input`
     & ${Moon} {
       transform: translate(-50%, -50%);
     }
+    & ${Track} {
+      background-color: #bbb;
+    }
   }
 `;
 

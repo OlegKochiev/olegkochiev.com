@@ -5,7 +5,7 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import AuthFormSchema from '../../utils/schemas/AuthValidation';
 import styled from 'styled-components';
 
-interface ILoginFormInputs {
+interface IAuthFormInputs {
   login: string;
   password: string;
 }
@@ -54,11 +54,11 @@ const Button = styled.button.attrs({
 `;
 
 const Auth = () => {
-  const form = useForm<ILoginFormInputs>({
+  const form = useForm<IAuthFormInputs>({
     resolver: yupResolver(AuthFormSchema),
   });
 
-  const onSubmit = (data: ILoginFormInputs) => console.log(data);
+  const onSubmit = (data: IAuthFormInputs) => console.log(data);
 
   return (
     <Container>
