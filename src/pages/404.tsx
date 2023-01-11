@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import Cosmonaut from '../components/404/Cosmonaut';
 import SadSmile from '../components/404/SadSmile';
 import Header from '../components/Header';
-import PageContainer from '../components/PageContainer';
 import {PATHS} from '../constants';
 
 const Main = styled.div`
   display: flex;
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -38,11 +38,16 @@ const Button = styled.button`
   padding: 10px;
   border: 1px solid #078080;
   transition: background-color 0.2s, color 0.2s;
-  color: inherit;
   &:hover {
     background-color: #078080;
     color: white;
   }
+`;
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px 15px;
 `;
 
 const Error404 = () => {

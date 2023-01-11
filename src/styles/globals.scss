@@ -1,6 +1,12 @@
 @import './scss/fonts.module';
 @import './scss/reset.module';
 
+html,
+body,
+#__next {
+  height: 100%;
+}
+
 body {
   font-family: 'Play';
   font-weight: normal;
