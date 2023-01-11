@@ -19,7 +19,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+  min-height: 100vh;
   padding: 20px 15px;
 `;
 const Info = styled.div`

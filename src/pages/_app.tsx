@@ -7,7 +7,7 @@ import Head from 'next/head';
 import {Theme} from '../types';
 
 const Main = styled.main`
-  height: 100%;
+  min-height: 100vh;
   background-color: ${({theme}) => theme.theme.backgroundColor};
   color: ${({theme}) => theme.theme.color};
   transition: color 0.25s, background-color 0.25s;

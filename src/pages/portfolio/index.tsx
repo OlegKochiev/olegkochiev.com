@@ -42,6 +42,42 @@ const projects = [
     data: '01.01.2021',
     stackTechnologies: [],
   },
+  {
+    tags: ['react', 'next.js'],
+    title: 'Создание собственного сайта портфолио5',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
+    data: '01.01.2023',
+    stackTechnologies: [],
+  },
+  {
+    tags: ['react', 'next.js'],
+    title: 'Создание собственного сайта портфолио8',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
+    data: '01.01.2022',
+    stackTechnologies: [],
+  },
+  {
+    tags: ['react', 'next.js'],
+    title: 'Создание собственного сайта портфолио1',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
+    data: '01.01.2023',
+    stackTechnologies: [],
+  },
+  {
+    tags: ['react', 'next.js'],
+    title: 'Создание собственного сайта портфолио2',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos hic fugiat dolore totam numquam eum inventore dolores commodi nulla.',
+    data: '01.01.2021',
+    stackTechnologies: [],
+  },
+  {
+    tags: ['react', 'next.js'],
+    title: 'Создание собственного сайта портфолио3',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
+    data: '01.01.2021',
+    stackTechnologies: [],
+  },
 ];
 
 export const Main = styled.main`

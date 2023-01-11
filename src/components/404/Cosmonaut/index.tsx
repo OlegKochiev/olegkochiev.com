@@ -3,8 +3,8 @@ import styled, {ThemeContext} from 'styled-components';
 
 const Cosmonaut = () => {
   const Cosmonaut = styled.div`
-    width: 500px;
-    height: 400px;
+    width: 550px;
+    height: 420px;
     background-color: ${({theme}) => theme.theme.color};
     mask-image: url('/404_cosmonaut.svg');
     mask-position: center;

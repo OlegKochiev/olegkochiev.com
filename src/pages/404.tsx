@@ -46,7 +46,7 @@ const Button = styled.button`
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
   padding: 20px 15px;
 `;
 
