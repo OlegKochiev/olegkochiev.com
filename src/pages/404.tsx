@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
+import Cosmonaut from '../components/404/Cosmonaut';
+import SadSmile from '../components/404/SadSmile';
 import Header from '../components/Header';
 import PageContainer from '../components/PageContainer';
 import {PATHS} from '../constants';
@@ -11,15 +13,6 @@ const Main = styled.div`
   justify-content: center;
   gap: 20px;
   height: 100%;
-`;
-
-const ImageContainer = styled.div``;
-
-const Image = styled.img.attrs({
-  src: '404.svg',
-  alt: 'космонавт бороздящий просторы космоса, в поисках подходящей страницы',
-})`
-  width: 500px;
 `;
 
 const DescContainer = styled.div`
@@ -38,16 +31,6 @@ const H2 = styled.h2`
   font-size: 32px;
 `;
 
-const SadSmile = styled.span`
-  display:inline-block;
-  width: 32px;
-  height: 32px;
-  mask-image: url('/icons/sad_smile.svg');
-  mask-position: center
-  mask-repeat: no-repeat;
-  background-color: black;
-`;
-
 const Desc = styled.p``;
 
 const Button = styled.button`
@@ -55,6 +38,7 @@ const Button = styled.button`
   padding: 10px;
   border: 1px solid #078080;
   transition: background-color 0.2s, color 0.2s;
+  color: inherit;
   &:hover {
     background-color: #078080;
     color: white;
@@ -66,9 +50,7 @@ const Error404 = () => {
     <PageContainer>
       <Header />
       <Main>
-        <ImageContainer>
-          <Image />
-        </ImageContainer>
+        <Cosmonaut />
         <DescContainer>
           <H1>404</H1>
           <H2>

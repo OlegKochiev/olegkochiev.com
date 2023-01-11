@@ -31,7 +31,7 @@ const Aside: React.FC<{}> = () => {
           <Ul>
             {links.map((link) => (
               <Li>
-                <Link href={link.href}>link.title</Link>
+                <Link href={link.href}>{link.title}</Link>
               </Li>
             ))}
           </Ul>
