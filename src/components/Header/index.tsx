@@ -10,6 +10,7 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 `;
 
 const GridContainer = styled.div`
@@ -17,7 +18,6 @@ const GridContainer = styled.div`
   grid-template-columns: 170px 550px;
   grid-gap: 30px;
   align-content: center;
-  margin-bottom: 30px;
 `;
 
 const NavContainer = styled.div`

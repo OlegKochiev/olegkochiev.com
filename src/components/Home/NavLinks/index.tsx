@@ -13,7 +13,8 @@ const Span = styled.span<{isActive: boolean}>`
   display: block;
   padding: 5px 5px;
   transition: background-color 0.15s, transform 0.15s, color 0.15s;
-  border-bottom: ${({isActive}) => (isActive ? '3px solid #078080' : 'none')};
+  border-bottom: 3px solid transparent;
+  border-color: ${({isActive}) => (isActive ? '#078080' : 'transparent')};
   &:hover {
     color: #fff;
     background-color: #078080;
