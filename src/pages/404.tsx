@@ -59,7 +59,7 @@ const Error404 = () => {
         <DescContainer>
           <H1>404</H1>
           <H2>
-            Ого! Похоже что ты заблудился <SadSmile />
+            Упс! Похоже что ты заблудился <SadSmile />
           </H2>
 
           <Desc>
