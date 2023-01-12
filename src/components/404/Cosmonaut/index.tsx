@@ -7,13 +7,26 @@ const Cosmonaut = () => {
   const Cosmonaut = styled.svg.attrs({
     version: '1.1',
     xmlns: 'http://www.w3.org/2000/svg',
-    xmlns: 'http://www.w3.org/1999/xlink',
+    xlink: 'http://www.w3.org/1999/xlink',
     viewBox: '0 0 800 600',
   })`
-    width: 550px;
-    height: 420px;
+    max-width: 550px;
     * {
       stroke: ${({theme}) => theme.theme.color};
+      transition: all 1s;
+    }
+
+    @keyframes spaceman {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(1deg);
+      }
+    }
+
+    #spaceman {
+      animation: spaceman 1.5s infinite alternate linear;
     }
   `;
 
@@ -456,7 +469,6 @@ const Cosmonaut = () => {
 			M273.813,410.969c0,0-54.527,39.501-115.34,38.218c-2.28-0.048-4.926-0.241-7.841-0.548
 			c-68.038-7.178-134.288-43.963-167.33-103.87c-0.908-1.646-1.793-3.3-2.654-4.964c-18.395-35.511-37.259-83.385-32.075-118.817"
           />
-
           <path
             id="backpack"
             fill="none"
@@ -470,31 +482,7 @@ const Cosmonaut = () => {
 			c3.889-14.504,18.799-23.11,33.303-19.221l52.349,14.035c14.504,3.889,23.11,18.799,19.221,33.303l-15.694,58.537
 			C360.647,451.083,349.251,457.661,338.164,454.689z"
           />
-          <g id="antenna">
-            <line
-              fill="none"
-              stroke="#0E0620"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              x1="323.396"
-              y1="236.625"
-              x2="295.285"
-              y2="353.753"
-            />
-            <circle
-              fill="none"
-              stroke="#0E0620"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              cx="323.666"
-              cy="235.617"
-              r="6.375"
-            />
-          </g>
+
           <g id="armR">
             <path
               fill="none"
@@ -663,17 +651,6 @@ const Cosmonaut = () => {
 				c-3.101-3.684-4.177-8.66-2.93-13.311l7.453-27.798c0.756-2.82,3.181-4.868,6.088-5.13c6.755-0.61,20.546-0.608,41.785,5.087
 				s33.181,12.591,38.725,16.498c2.387,1.682,3.461,4.668,2.705,7.488L380.857,346.164z"
             />
-            <g clip-path="url(#GlassClip)">
-              <polygon
-                id="glassShine"
-                fill="none"
-                stroke="#0E0620"
-                stroke-width="3"
-                stroke-miterlimit="10"
-                points="
-					278.436,375.599 383.003,264.076 364.393,251.618 264.807,364.928 				"
-              />
-            </g>
           </g>
         </g>
       </g>
