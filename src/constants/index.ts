@@ -12,7 +12,7 @@ const PATHS = {
 const THEME = {
   DARK: {
     backgroundColor: '#202627',
-    color: '#bbb',
+    color: '#ddd',
     lineColor: '#404040',
   },
   LIGHT: {
