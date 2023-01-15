@@ -1,7 +1,7 @@
 import React from 'react';
 
-const TapBar = () => {
+const TabItem = () => {
   return <div></div>;
 };
 
-export default TapBar;
+export default TabItem;

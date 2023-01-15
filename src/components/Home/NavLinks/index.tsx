@@ -46,7 +46,7 @@ const NavLink = ({title, path}: {title: string; path: string}) => {
   const isActive = router.pathname === path;
 
   return (
-    <Link href={path} hidden={router.pathname === path && path === PATHS.HOME()}>
+    <Link href={path} hidden={isActive && path === PATHS.HOME()}>
       <Span isActive={isActive}>{title}</Span>
     </Link>
   );
