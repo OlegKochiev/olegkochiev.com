@@ -9,7 +9,7 @@ const Line = styled.div`
 `;
 
 const VerticalLine = () => {
-  const {theme, setTheme} = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
   return <Line></Line>;
 };
 

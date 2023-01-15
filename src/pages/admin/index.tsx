@@ -5,8 +5,7 @@ import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
 
 const Main = styled.div`
-  display: grid;
-  grid-template-columns: 250px 1fr;
+  height: 100%;
 `;
 const Admin: React.FC<{}> = () => {
   return (

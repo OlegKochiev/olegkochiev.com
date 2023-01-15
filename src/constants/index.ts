@@ -11,10 +11,6 @@ const PATHS = {
 
 const THEME = {
   DARK: {
-    bgColor: {
-      primary: '',
-      secondary: '',
-    },
     backgroundColor: '#202627',
     color: '#ddd',
     lineColor: '#404040',

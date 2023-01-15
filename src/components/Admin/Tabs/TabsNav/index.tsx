@@ -20,7 +20,7 @@ const tabs = [
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #c7c7c7;
+  background-color: #d7d7d7;
 `;
 
 const TabsNav = ({activeTab, setActiveTab}: {activeTab: string; setActiveTab: void}) => {
