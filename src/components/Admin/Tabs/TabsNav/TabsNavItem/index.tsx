@@ -1,7 +1,12 @@
 import React, {useContext} from 'react';
 import styled, {ThemeContext} from 'styled-components';
 
-const TabButton = styled.button.attrs({
+interface ITabButton {
+  type: string;
+  isActive: boolean;
+}
+
+const TabButton: ITabButton = styled.button.attrs({
   type: 'button',
 })`
   padding: 30px;

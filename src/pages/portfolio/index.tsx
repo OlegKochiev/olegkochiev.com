@@ -5,7 +5,15 @@ import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
 import {PATHS} from '../../constants';
 
-const projects = [
+interface Project {
+  tags: string[];
+  title: string;
+  description: string;
+  data: string;
+  stackTechnologies: string[];
+}
+
+const projects: Project[] = [
   {
     tags: ['react', 'next.js'],
     title: 'Создание собственного сайта портфолио5',
@@ -125,7 +133,7 @@ const Description = styled.h3`
 `;
 
 const Portfolio = () => {
-  let projectsByYear = {};
+  let projectsByYear: {[key: string]: Project[]} = {};
   projects.forEach((project) => {
     if (!projectsByYear[project.data]) projectsByYear[project.data] = [];
     projectsByYear[project.data].push(project);
