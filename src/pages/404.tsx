@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Cosmonaut from '../components/404/Cosmonaut';
 import SadSmile from '../components/404/SadSmile';
+import DefaultButton from '../components/DefaultComponents/Button';
 import Header from '../components/Header';
 import {PATHS} from '../constants';
 
@@ -33,16 +34,7 @@ const H2 = styled.h2`
 
 const Desc = styled.p``;
 
-const Button = styled.button`
-  width: fit-content;
-  padding: 10px;
-  border: 1px solid #078080;
-  transition: background-color 0.2s, color 0.2s;
-  &:hover {
-    background-color: #078080;
-    color: white;
-  }
-`;
+const Button = styled(DefaultButton)``;
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;

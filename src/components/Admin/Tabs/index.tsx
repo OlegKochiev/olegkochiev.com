@@ -7,9 +7,14 @@ import TabsNav from './TabsNav';
 const Container = styled.div`
   display: grid;
   grid-template-columns: 240px 1fr;
+  grid-gap: 50px;
+  height: 100%;
+  background-color: #f8f8f8;
 `;
 
-const TabsContent = styled.div``;
+const TabsContent = styled.div`
+  padding: 20px;
+`;
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(DEFAULT_ACTIVE_TAB);

@@ -7,7 +7,10 @@ const TabButton = styled.button.attrs({
   padding: 30px;
   border-left: 6px solid transparent;
   border-left-color: ${({theme, isActive}) => (isActive ? theme.theme.blueColor : 'transparent')};
-  background-color: ${({theme, isActive}) => (isActive ? theme.theme.backgroundColor : 'inherit')};
+  background-color: ${({theme, isActive}) => (isActive ? '#f8f8f8' : 'inherit')};
+  font-size: 14px;
+  color: ${({theme, isActive}) => (isActive ? theme.theme.blueColor : 'inherit')};
+  text-transform: uppercase;
 `;
 
 const TabsNavItem = ({tabName, activeTab, setActiveTab}: {tabName: string; activeTab: string; setActiveTab: void}) => {

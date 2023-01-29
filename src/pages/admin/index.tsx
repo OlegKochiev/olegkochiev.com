@@ -5,8 +5,11 @@ import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
 
 const Main = styled.div`
-  height: 100%;
+  max-width: 1200px;
+  height: 600px;
+  margin: 0 auto;
 `;
+
 const Admin: React.FC<{}> = () => {
   return (
     <PageContainer>
