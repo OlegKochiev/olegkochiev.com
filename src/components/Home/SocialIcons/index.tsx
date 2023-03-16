@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import {socialIconsDatas} from '../../../data/home';
 
-const Social = styled.span`
+const Social = styled.span<{iconSrc: string; bgColor: string}>`
   width: 30px;
   height: 30px;
   display: block;

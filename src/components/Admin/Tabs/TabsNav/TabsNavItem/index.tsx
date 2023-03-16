@@ -1,14 +1,7 @@
 import React, {useContext} from 'react';
 import styled, {ThemeContext} from 'styled-components';
 
-interface ITabButton {
-  type: string;
-  isActive: boolean;
-}
-
-const TabButton: ITabButton = styled.button.attrs({
-  type: 'button',
-})`
+const TabButton = styled.button<{isActive: boolean}>`
   padding: 30px;
   border-left: 6px solid transparent;
   border-left-color: ${({theme, isActive}) => (isActive ? theme.theme.blueColor : 'transparent')};
@@ -22,7 +15,7 @@ const TabsNavItem = ({tabName, activeTab, setActiveTab}: {tabName: string; activ
   const {theme} = useContext(ThemeContext);
   const isActive = tabName === activeTab;
   return (
-    <TabButton onClick={() => setActiveTab(tabName)} isActive={isActive}>
+    <TabButton onClick={() => setActiveTab(tabName)} isActive={isActive} type="button">
       {tabName}
     </TabButton>
   );
