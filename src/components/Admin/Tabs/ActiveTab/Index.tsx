@@ -9,7 +9,8 @@ const ActiveTab = ({activeTab}: {activeTab: string}) => {
     education: <EducationTab />,
     aboutMe: <AboutMeTab />,
   };
-  return tabs[activeTab];
+  // return tabs[activeTab];
+  return <div></div>;
 };
 
 export default ActiveTab;

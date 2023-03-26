@@ -42,7 +42,7 @@ const AboutMeTab = () => {
         <Label>
           Готовность к переезду:
           <Select>
-            <Option dafaltValue="ready">Готов</Option>
+            <Option defaultValue="ready">Готов</Option>
             <Option value="notReady">Не готов</Option>
           </Select>
         </Label>
