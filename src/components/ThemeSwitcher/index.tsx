@@ -100,7 +100,7 @@ const ThemeSwitcher = () => {
 
   return (
     <Container>
-      <Input onClick={handleToggleTheme} id="theme-switch" type="checkbox" defaultChecked={theme === THEME.DARK} />
+      {/* <Input onClick={handleToggleTheme} id="theme-switch" type="checkbox" defaultChecked={theme === THEME.DARK} /> */}
       <Label htmlFor="theme-switch">
         <Track />
         <Control>

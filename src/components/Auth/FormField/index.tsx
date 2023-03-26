@@ -48,7 +48,7 @@ const FormField: React.FC<IFormFieldProps> = ({name, fieldType, title}) => {
     <Label>
       {title}
       <Input {...register(name)} type={fieldType} />
-      <ErrorMessage>{errors[name]?.message}</ErrorMessage>
+      {/* <ErrorMessage>{errors[name]?.message}</ErrorMessage> */}
     </Label>
   );
 };

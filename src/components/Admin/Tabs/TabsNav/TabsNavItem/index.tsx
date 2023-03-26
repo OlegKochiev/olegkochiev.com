@@ -15,9 +15,10 @@ const TabsNavItem = ({tabName, activeTab, setActiveTab}: {tabName: string; activ
   const {theme} = useContext(ThemeContext);
   const isActive = tabName === activeTab;
   return (
-    <TabButton onClick={() => setActiveTab(tabName)} isActive={isActive} type="button">
-      {tabName}
-    </TabButton>
+    // <TabButton onClick={() => setActiveTab(tabName)} isActive={isActive} type="button">
+    //   {tabName}
+    // </TabButton>
+    <div></div>
   );
 };
 

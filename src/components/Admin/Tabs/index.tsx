@@ -21,7 +21,7 @@ const Tabs = () => {
 
   return (
     <Container>
-      <TabsNav activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* <TabsNav activeTab={activeTab} setActiveTab={setActiveTab} /> */}
       <TabsContent>
         <ActiveTab activeTab={activeTab} />
       </TabsContent>
