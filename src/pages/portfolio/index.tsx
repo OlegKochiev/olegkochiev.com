@@ -149,8 +149,8 @@ const Portfolio = () => {
           <Section key={year}>
             <Year>{year}</Year>
             <ProjectsContainer>
-              {projects.map((project) => (
-                <Article key={project.title}>
+              {projects.map((project, index) => (
+                <Article key={project.title + index}>
                   <Tags>
                     {project.tags.map((tag) => (
                       <Link key={tag} href={PATHS.PORTFOLIO.BY_TAG(tag)}>
