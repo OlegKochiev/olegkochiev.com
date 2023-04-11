@@ -1,18 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import NavLinks from '../components/Home/NavLinks';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import SocialIcons from '../components/Home/SocialIcons';
-import {PATHS, THEME} from '../constants';
-import {Theme} from '../types';
 
 import Head from 'next/head';
-import styled, {ThemeContext} from 'styled-components';
+import styled from 'styled-components';
 
 import styles from '../styles/style.module.scss';
 import VerticalLine from '../components/Home/VerticalLine';
 import MyImage from '../components/Home/MyImage';
 import {homePageDatas} from '../data/home';
-import ThemeSwitcher2 from '../components/ThemeSwitcher';
 
 const Container = styled.div`
   display: flex;
@@ -45,7 +42,6 @@ export const MyName = styled.h1`
 `;
 
 export default function Home() {
-  const [theme, setTheme] = useState<Theme>(THEME.LIGHT);
   return (
     <Container>
       <ThemeSwitcher />
