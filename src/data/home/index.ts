@@ -7,7 +7,7 @@ export const homePageDatas = {
 export const socialIconsDatas = [
   {
     name: 'linkedIn',
-    href: 'https://www.linkedin.com',
+    href: 'https://www.linkedin.com/in/oleg-kochiev/',
     imgSrc: '/linkedin.svg',
     bgColor: '#0a66c2',
   },
@@ -17,12 +17,6 @@ export const socialIconsDatas = [
     imgSrc: '/github.svg',
     bgColor: '#000',
   },
-  // {
-  //   name: 'hh.ru',
-  //   href: 'https://www.hh.ru',
-  //   imgSrc: '/hh.ru.svg',
-  //   bgColor: 'red',
-  // },
   {
     name: 'vkontakte',
     href: 'https://www.vk.com',
