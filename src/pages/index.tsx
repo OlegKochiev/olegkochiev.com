@@ -26,6 +26,11 @@ const Info = styled.div`
   gap: 2.5em;
   width: 100%;
   min-height: 120px;
+  @media (max-width: 770px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  } ;
 `;
 
 const UserInfo = styled.div`
@@ -33,6 +38,9 @@ const UserInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 1em;
+  @media (max-width: 770px) {
+    align-items: center;
+  } ;
 `;
 
 export const MyName = styled.h1`
