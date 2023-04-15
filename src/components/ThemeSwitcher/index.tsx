@@ -1,7 +1,6 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useState} from 'react';
 import styled, {ThemeContext} from 'styled-components';
 import {THEME} from '../../constants';
-import useLocalStorage from '../../hooks/useLocalStorage';
 
 const transitionTime = '0.3s';
 const transitionTimingFunction = 'easy-in-out';
@@ -92,16 +91,18 @@ const Container = styled.div`
 
 const ThemeSwitcher = () => {
   const {theme, setTheme} = useContext(ThemeContext);
+  const [isSwitcherChecked, setSwitcherChecked] = useState(theme.mode === THEME.DARK.mode);
 
   const handleToggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
     const isChecked = e?.target?.checked;
     const selectedTheme = isChecked ? THEME.DARK : THEME.LIGHT;
     setTheme(selectedTheme);
+    setSwitcherChecked(!isSwitcherChecked);
   };
 
   return (
     <Container>
-      <Input onChange={handleToggleTheme} id="theme-switch" type="checkbox" checked={theme === THEME.DARK} />
+      <Input onChange={handleToggleTheme} id="theme-switch" type="checkbox" checked={isSwitcherChecked} />
       <Label htmlFor="theme-switch">
         <Track />
         <Control>
