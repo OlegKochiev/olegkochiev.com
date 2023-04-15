@@ -1,6 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import styled, {ThemeContext} from 'styled-components';
 import {THEME} from '../../constants';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 const transitionTime = '0.3s';
 const transitionTimingFunction = 'easy-in-out';
@@ -91,12 +92,13 @@ const Container = styled.div`
 
 const ThemeSwitcher = () => {
   const {theme, setTheme} = useContext(ThemeContext);
+  const [value, setValue] = useLocalStorage('theme', theme);
+  // console.log(value);
 
   const handleToggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
     const isChecked = e?.target?.checked;
     const selectedTheme = isChecked ? THEME.DARK : THEME.LIGHT;
     setTheme(selectedTheme);
-    console.log(localStorage);
   };
 
   return (
