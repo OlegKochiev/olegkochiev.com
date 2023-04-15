@@ -92,8 +92,6 @@ const Container = styled.div`
 
 const ThemeSwitcher = () => {
   const {theme, setTheme} = useContext(ThemeContext);
-  const [value, setValue] = useLocalStorage('theme', theme);
-  // console.log(value);
 
   const handleToggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
     const isChecked = e?.target?.checked;
