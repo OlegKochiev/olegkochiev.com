@@ -93,14 +93,14 @@ const ThemeSwitcher = () => {
   const {theme, setTheme} = useContext(ThemeContext);
   const [isChecked, setChecked] = useState(theme.mode === 'dark');
 
+  const handleToggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(!isChecked);
+  };
+
   useEffect(() => {
     const selectedTheme = isChecked ? THEME.DARK : THEME.LIGHT;
     setTheme(selectedTheme);
   }, [isChecked]);
-
-  const handleToggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked(!isChecked);
-  };
 
   return (
     <Container>

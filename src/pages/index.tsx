@@ -3,10 +3,8 @@ import NavLinks from '../components/Home/NavLinks';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import SocialIcons from '../components/Home/SocialIcons';
 
-import Head from 'next/head';
 import styled from 'styled-components';
 
-import styles from '../styles/style.module.scss';
 import VerticalLine from '../components/Home/VerticalLine';
 import MyImage from '../components/Home/MyImage';
 import {homePageDatas} from '../data/home';

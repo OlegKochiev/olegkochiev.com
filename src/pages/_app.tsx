@@ -6,6 +6,8 @@ import React, {useState} from 'react';
 import Head from 'next/head';
 import {Theme} from '../types';
 import useLocalStorage from '../hooks/useLocalStorage';
+import {Provider} from 'react-redux';
+import {store} from '../store';
 
 const Main = styled.main`
   min-height: 100vh;
@@ -18,15 +20,17 @@ export default function App({Component, pageProps}: AppProps) {
   const [theme, setTheme] = useLocalStorage<Theme>('theme', THEME.LIGHT);
 
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
-      <React.Fragment>
-        <Head>
-          <title>Олег Кочиев | Сайт Портфолио</title>
-        </Head>
-        <Main>
-          <Component {...pageProps} />
-        </Main>
-      </React.Fragment>
-    </ThemeContext.Provider>
+    <Provider store={store}>
+      <ThemeContext.Provider value={{theme, setTheme}}>
+        <React.Fragment>
+          <Head>
+            <title>Олег Кочиев | Сайт Портфолио</title>
+          </Head>
+          <Main>
+            <Component {...pageProps} />
+          </Main>
+        </React.Fragment>
+      </ThemeContext.Provider>
+    </Provider>
   );
 }
