@@ -6,6 +6,7 @@ export interface Theme {
   backgroundColor: string;
   color: string;
   lineColor: string;
+  blueColor: string;
   mode: string;
 }
 

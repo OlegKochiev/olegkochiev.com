@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import NavLinks from '../../components/Home/NavLinks';
 import PageContainer from '../../components/PageContainer';
 import {Main, Section} from '../portfolio';
+import ThemeContainer from '../../components/ThemeContainer';
 
 const Hello = styled.h1``;
 const Title = styled.p`
@@ -39,25 +40,27 @@ const aboutMe = [
 
 const AboutMe = () => {
   return (
-    <PageContainer>
-      <Header />
-      <Main>
-        <Section>
-          <Title />
-          <Hello>Привет!</Hello>
-        </Section>
-        {aboutMe.map((info) => (
-          <Section key={info.title}>
-            <Title> {info.title} </Title>
-            <DescriptionsContainer>
-              {info.descriptions.map((description) => (
-                <Description key={description}>{description}</Description>
-              ))}
-            </DescriptionsContainer>
+    <ThemeContainer>
+      <PageContainer>
+        <Header />
+        <Main>
+          <Section>
+            <Title />
+            <Hello>Привет!</Hello>
           </Section>
-        ))}
-      </Main>
-    </PageContainer>
+          {aboutMe.map((info) => (
+            <Section key={info.title}>
+              <Title> {info.title} </Title>
+              <DescriptionsContainer>
+                {info.descriptions.map((description) => (
+                  <Description key={description}>{description}</Description>
+                ))}
+              </DescriptionsContainer>
+            </Section>
+          ))}
+        </Main>
+      </PageContainer>
+    </ThemeContainer>
   );
 };
 

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
 import {PATHS} from '../../constants';
+import ThemeContainer from '../../components/ThemeContainer';
 
 interface Project {
   tags: string[];
@@ -142,33 +143,35 @@ const Portfolio = () => {
   const projectsByData = Object.entries(projectsByYear);
 
   return (
-    <PageContainer>
-      <Header />
-      <Main>
-        {projectsByData.map(([year, projects]) => (
-          <Section key={year}>
-            <Year>{year}</Year>
-            <ProjectsContainer>
-              {projects.map((project, index) => (
-                <Article key={project.title + index}>
-                  <Tags>
-                    {project.tags.map((tag) => (
-                      <Link key={tag} href={PATHS.PORTFOLIO.BY_TAG(tag)}>
-                        <Tag>#{tag}</Tag>
-                      </Link>
-                    ))}
-                  </Tags>
-                  <Link href={PATHS.PORTFOLIO.BY_NAME(project.title)}>
-                    <Title>{project.title}</Title>
-                  </Link>
-                  <Description>{project.description}</Description>
-                </Article>
-              ))}
-            </ProjectsContainer>
-          </Section>
-        ))}
-      </Main>
-    </PageContainer>
+    <ThemeContainer>
+      <PageContainer>
+        <Header />
+        <Main>
+          {projectsByData.map(([year, projects]) => (
+            <Section key={year}>
+              <Year>{year}</Year>
+              <ProjectsContainer>
+                {projects.map((project, index) => (
+                  <Article key={project.title + index}>
+                    <Tags>
+                      {project.tags.map((tag) => (
+                        <Link key={tag} href={PATHS.PORTFOLIO.BY_TAG(tag)}>
+                          <Tag>#{tag}</Tag>
+                        </Link>
+                      ))}
+                    </Tags>
+                    <Link href={PATHS.PORTFOLIO.BY_NAME(project.title)}>
+                      <Title>{project.title}</Title>
+                    </Link>
+                    <Description>{project.description}</Description>
+                  </Article>
+                ))}
+              </ProjectsContainer>
+            </Section>
+          ))}
+        </Main>
+      </PageContainer>
+    </ThemeContainer>
   );
 };
 

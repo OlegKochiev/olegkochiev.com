@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const GlobalContext = createContext({
-  theme: {},
+  theme: THEME.LIGHT,
   themeSwitchHandler: (theme: Theme) => {},
 });
 

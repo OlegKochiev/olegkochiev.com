@@ -1,10 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import styled from 'styled-components';
 import NavLinks from '../components/Home/NavLinks';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import SocialIcons from '../components/Home/SocialIcons';
-
-import styled from 'styled-components';
-
+import ThemeContainer from '../components/ThemeContainer';
 import VerticalLine from '../components/Home/VerticalLine';
 import MyImage from '../components/Home/MyImage';
 import {homePageDatas} from '../data/home';
@@ -49,17 +48,19 @@ export const MyName = styled.h1`
 
 export default function Home() {
   return (
-    <Container>
-      <ThemeSwitcher />
-      <Info>
-        <MyImage />
-        <VerticalLine />
-        <UserInfo>
-          <MyName>{homePageDatas.myName}</MyName>
-          <NavLinks />
-        </UserInfo>
-      </Info>
-      <SocialIcons />
-    </Container>
+    <ThemeContainer>
+      <Container>
+        <ThemeSwitcher />
+        <Info>
+          <MyImage />
+          <VerticalLine />
+          <UserInfo>
+            <MyName>{homePageDatas.myName}</MyName>
+            <NavLinks />
+          </UserInfo>
+        </Info>
+        <SocialIcons />
+      </Container>
+    </ThemeContainer>
   );
 }
