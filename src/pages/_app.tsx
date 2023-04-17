@@ -1,13 +1,12 @@
-import '../styles/globals.scss';
-import type {AppProps} from 'next/app';
-import styled, {ThemeContext} from 'styled-components';
-import {THEME} from '../constants';
-import React, {useState} from 'react';
+import React, {createContext} from 'react';
 import Head from 'next/head';
-import {Theme} from '../types';
+import styled, {ThemeContext} from 'styled-components';
+import type {AppProps} from 'next/app';
 import useLocalStorage from '../hooks/useLocalStorage';
-import {Provider} from 'react-redux';
-import {store} from '../store';
+import {Theme} from '../types';
+import {THEME} from '../constants';
+import '../styles/globals.scss';
+import GlobalContextProvider from '../context/ThemeContext';
 
 const Main = styled.main`
   min-height: 100vh;
@@ -20,7 +19,7 @@ export default function App({Component, pageProps}: AppProps) {
   const [theme, setTheme] = useLocalStorage<Theme>('theme', THEME.LIGHT);
 
   return (
-    <Provider store={store}>
+    <GlobalContextProvider>
       <ThemeContext.Provider value={{theme, setTheme}}>
         <React.Fragment>
           <Head>
@@ -31,6 +30,6 @@ export default function App({Component, pageProps}: AppProps) {
           </Main>
         </React.Fragment>
       </ThemeContext.Provider>
-    </Provider>
+    </GlobalContextProvider>
   );
 }
