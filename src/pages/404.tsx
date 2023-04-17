@@ -6,6 +6,7 @@ import SadSmile from '../components/404/SadSmile';
 import DefaultButton from '../components/DefaultComponents/Button';
 import Header from '../components/Header';
 import {PATHS} from '../constants';
+import ThemeContainer from '../components/ThemeContainer';
 
 const Main = styled.div`
   display: flex;
@@ -44,26 +45,28 @@ const PageContainer = styled.div`
 
 const Error404 = () => {
   return (
-    <PageContainer>
-      <Header />
-      <Main>
-        <Cosmonaut />
-        <DescContainer>
-          <H1>404</H1>
-          <H2>
-            Упс! Похоже что ты заблудился <SadSmile />
-          </H2>
+    <ThemeContainer>
+      <PageContainer>
+        <Header />
+        <Main>
+          <Cosmonaut />
+          <DescContainer>
+            <H1>404</H1>
+            <H2>
+              Упс! Похоже что ты заблудился <SadSmile />
+            </H2>
 
-          <Desc>
-            Страница, которую ты ищешь, не существует. Как ты сюда попал, остается загадкой. Но ты можешь нажать на
-            кнопку ниже, чтобы вернуться на главную страницу.
-          </Desc>
-          <Button>
-            <Link href={PATHS.HOME()}>На главную</Link>
-          </Button>
-        </DescContainer>
-      </Main>
-    </PageContainer>
+            <Desc>
+              Страница, которую ты ищешь, не существует. Как ты сюда попал, остается загадкой. Но ты можешь нажать на
+              кнопку ниже, чтобы вернуться на главную страницу.
+            </Desc>
+            <Button>
+              <Link href={PATHS.HOME()}>На главную</Link>
+            </Button>
+          </DescContainer>
+        </Main>
+      </PageContainer>
+    </ThemeContainer>
   );
 };
 

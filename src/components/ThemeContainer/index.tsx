@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {GlobalContext} from '../../context/ThemeContext';
+import {GlobalContext} from '../../context/GlobalContext';
 import styled from 'styled-components';
 
 export const Container = styled.main`

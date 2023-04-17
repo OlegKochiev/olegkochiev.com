@@ -1,7 +1,7 @@
 import {Fragment, useContext} from 'react';
-import styled, {ThemeContext} from 'styled-components';
+import styled from 'styled-components';
 import {homePageDatas} from '../../../data/home';
-import {GlobalContext} from '../../../context/ThemeContext';
+import {GlobalContext} from '../../../context/GlobalContext';
 
 const Image = styled.img`
   width: 130px;

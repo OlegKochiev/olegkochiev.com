@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
-import styled, {ThemeContext} from 'styled-components';
-import {GlobalContext} from '../../../context/ThemeContext';
+import styled from 'styled-components';
+import {GlobalContext} from '../../../context/GlobalContext';
 
 const Line = styled.div`
   width: 1px;
-  height: 80%;
+  height: 120px;
   background-color: ${({theme}) => theme.lineColor};
   transition: background-color 0.25s;
 `;

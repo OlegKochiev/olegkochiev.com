@@ -1,8 +1,9 @@
 import React, {useContext} from 'react';
-import styled, {ThemeContext} from 'styled-components';
+import styled from 'styled-components';
+import {GlobalContext} from '../../../context/GlobalContext';
 
 const Cosmonaut = () => {
-  const {theme} = useContext(ThemeContext);
+  const {theme} = useContext(GlobalContext);
 
   const Cosmonaut = styled.svg.attrs({
     version: '1.1',
@@ -12,7 +13,7 @@ const Cosmonaut = () => {
   })`
     max-width: 550px;
     * {
-      stroke: ${({theme}) => theme.theme.color};
+      stroke: ${({theme}) => theme.color};
       transition: all 1s;
     }
 
@@ -31,7 +32,7 @@ const Cosmonaut = () => {
   `;
 
   return (
-    <Cosmonaut>
+    <Cosmonaut theme={theme}>
       <g>
         <g id="planet">
           <circle

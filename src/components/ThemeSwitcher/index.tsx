@@ -1,8 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
-import styled, {ThemeContext} from 'styled-components';
+import styled from 'styled-components';
 import {THEME} from '../../constants';
-import useLocalStorage from '../../hooks/useLocalStorage';
-import {GlobalContext} from '../../context/ThemeContext';
+import {GlobalContext} from '../../context/GlobalContext';
 
 const transitionTime = '0.3s';
 const transitionTimingFunction = 'easy-in-out';
