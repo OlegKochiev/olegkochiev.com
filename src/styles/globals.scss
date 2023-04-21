@@ -8,8 +8,22 @@ body,
 }
 
 * {
-  scrollbar-color: #078080 #202627;
   scrollbar-width: thin;
+  scrollbar-color: #078080 #202627;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #202627;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #078080;
+  border-radius: 10px;
+  border: 3px;
 }
 
 body {
