@@ -7,6 +7,18 @@ body,
   min-height: 100vh;
 }
 
+*::-webkit-scrollbar {
+  border: none;
+  width: 7px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #078080;
+  border-radius: 3px;
+}
+*::-webkit-scrollbar-track {
+  background: #9c92a0;
+}
+
 body {
   font-family: 'Play';
   font-weight: normal;
