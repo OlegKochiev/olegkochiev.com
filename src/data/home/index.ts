@@ -8,7 +8,7 @@ export const socialIconsDatas = [
   {
     name: 'linkedIn',
     href: 'https://www.linkedin.com/in/oleg-kochiev/',
-    imgSrc: '/linkedin.svg',
+    imgSrc: '/linkedin2.svg',
     bgColor: '#0a66c2',
   },
   {
