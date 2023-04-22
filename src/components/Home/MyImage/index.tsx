@@ -15,7 +15,7 @@ const MyImage = () => {
   const {theme} = useContext(GlobalContext);
   return (
     <Fragment>
-      <Image alt="my image" theme={theme} src={homePageDatas.imgSrc} />
+      <Image alt="avatar" theme={theme} src={homePageDatas.imgSrc} />
     </Fragment>
   );
 };
