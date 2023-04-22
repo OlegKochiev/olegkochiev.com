@@ -13,7 +13,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   padding: 20px 15px;
 `;
 const Info = styled.div`
@@ -26,8 +26,8 @@ const Info = styled.div`
   @media (max-width: 770px) {
     flex-direction: column;
     align-items: center;
-    gap: 1.5em;
-  } ;
+    gap: 1em;
+  }
 `;
 
 const UserInfo = styled.div`
@@ -37,7 +37,7 @@ const UserInfo = styled.div`
   gap: 1em;
   @media (max-width: 770px) {
     align-items: center;
-  } ;
+  }
 `;
 
 export const MyName = styled.h1`

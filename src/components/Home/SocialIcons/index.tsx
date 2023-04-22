@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Link from 'next/link';
+import {GlobalContext} from '../../../context/GlobalContext';
 import styled from 'styled-components';
 import {socialIconsDatas} from '../../../data/home';
 
@@ -7,7 +8,7 @@ const Social = styled.span<{iconSrc: string; bgColor: string}>`
   width: 30px;
   height: 30px;
   display: block;
-  background-color: ${({bgColor}) => bgColor};
+  background-color: ${({theme}) => theme.lineColor};
   mask-size: 30px;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -16,7 +17,7 @@ const Social = styled.span<{iconSrc: string; bgColor: string}>`
 
   &:hover {
     transform: scale(1.1);
-    background-color: #078080;
+    background-color: ${({bgColor}) => bgColor};
   }
 `;
 
@@ -33,12 +34,13 @@ const Li = styled.li`
 `;
 
 const SocialIcons = () => {
+  const {theme} = useContext(GlobalContext);
   return (
     <Ul>
       {socialIconsDatas.map(({name, href, imgSrc, bgColor}) => (
         <Li key={name}>
           <Link href={href} target="_blank">
-            <Social iconSrc={imgSrc} bgColor={bgColor} />
+            <Social iconSrc={imgSrc} bgColor={bgColor} theme={theme} />
           </Link>
         </Li>
       ))}

@@ -1,6 +1,6 @@
 export const homePageDatas = {
   myName: 'Олег Кочиев',
-  imgSrc: '/favicon.svg',
+  imgSrc: '/avatar.svg',
   links: [],
 };
 
