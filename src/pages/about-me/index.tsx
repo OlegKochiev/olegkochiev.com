@@ -19,22 +19,40 @@ const aboutMe = [
   {
     title: '',
     descriptions: [
-      'Я Олег, frontend2 react разработчик tex12t tex12t  tex12t tex12t  tex12t tex12t  tex12t tex12t ',
-      'Я Олег, frontend rfeact разработчик tex12t tex12t  tex12t tex12t  tex12t tex12t  tex12t tex12t ',
-      'Я Олег, frontensd react разработчик tex12t tex12t  tex12t tex12t  tex12t tex12t  tex12t tex12t ',
+      `Меня зовут Олег. Я frontend-разработчик. Занимаюсь разработкой более 2-х лет.
+      Помимо основных навыков, есть опыт работы с:
+        - сборщиком проектов Webpack
+        - системой контроля версий Git
+        - системой управления проектами Jira/Space
+        - фреймворк для тестирования - Jest
+        - UI библиотеками: MUI, Bootstrap, Styled-components
+        - backend: nodejs (ExpressJS)
+        - Базами данных: noSQL - mongodb, SQL - MySQL
+        - GraphQL`,
     ],
   },
   {
     title: 'Технический стек',
-    descriptions: ['2', 'te2xt', 'te3xt'],
+    descriptions: [
+      'ReactJS',
+      'Redux(RTK)',
+      'TypeScript',
+      'JavaScript(ES6)',
+      'HTML5/CSS3',
+      'NodeJS',
+      'ExpressJS',
+      'NextJS',
+      'MUI',
+      'Git',
+    ],
   },
   {
-    title: 'Готовность к переезду',
-    descriptions: ['t6ext', 'te5t', 'tex4t'],
+    title: 'Готовность к переезду:',
+    descriptions: ['Готов'],
   },
   {
-    title: 'Владение английским',
-    descriptions: ['te7xt', 'te8xt', 'tex9t'],
+    title: 'Владение английским:',
+    descriptions: ['B1'],
   },
 ];
 
