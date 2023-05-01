@@ -94,27 +94,50 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  @media (max-width: 770px) {
+    align-items: flex-start;
+    gap: 20px;
+  }
 `;
 export const Section = styled.section`
   display: grid;
   grid-template-columns: 170px 550px;
   grid-gap: 30px;
+  @media (max-width: 770px) {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
 `;
 const Year = styled.div`
   text-align: end;
+  @media (max-width: 770px) {
+    text-align: start;
+  }
 `;
-const ProjectsContainer = styled.div``;
+const ProjectsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media (max-width: 770px) {
+    gap: 15px;
+  }
+`;
 const Article = styled.article`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
-  margin-bottom: 30px;
+  @media (max-width: 770px) {
+    gap: 0;
+  }
 `;
 const Tags = styled.div`
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
+  @media (max-width: 770px) {
+    margin-bottom: 0;
+  }
 `;
 const Tag = styled.div`
   font-size: 14px;
@@ -122,16 +145,23 @@ const Tag = styled.div`
   &:hover {
     border-color: inherit;
   }
+  @media (max-width: 770px) {
+    border: none;
+    padding: 10px 0;
+  }
 `;
-const Title = styled.h2`
+const Title = styled.h3`
   border-bottom: 1px solid transparent;
+  font-size: 15px;
   &:hover {
     border-color: inherit;
   }
+  @media (max-width: 770px) {
+    padding: 10px 0;
+    border: none;
+  }
 `;
-const Description = styled.h3`
-  font-size: 15px;
-`;
+const Description = styled.p``;
 
 const Portfolio = () => {
   let projectsByYear: {[key: string]: Project[]} = {};
