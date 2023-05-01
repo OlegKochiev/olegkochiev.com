@@ -9,11 +9,11 @@ const Title = styled.p`
   text-align: end;
   @media (max-width: 770px) {
     text-align: start;
+    font-size: 15px;
   }
 `;
 const DescriptionsContainer = styled.div``;
 const Description = styled.p`
-  margin-bottom: 10px;
   white-space: pre-wrap;
 `;
 
@@ -22,7 +22,7 @@ const aboutMe = [
     title: 'Привет:',
     descriptions: [
       `Меня зовут Олег. Я frontend-разработчик. Занимаюсь разработкой более 2-х лет.
-Помимо основных навыков, есть опыт работы с:
+Помимо основных технического стека, также владею:
 - сборщиком проектов Webpack
 - системой контроля версий Git
 - системой управления проектами Jira/Space
@@ -64,9 +64,6 @@ const AboutMe = () => {
       <PageContainer>
         <Header />
         <Main>
-          <Section>
-            <Title />
-          </Section>
           {aboutMe.map((info) => (
             <Section key={info.title}>
               <Title> {info.title} </Title>
