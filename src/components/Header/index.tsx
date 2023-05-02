@@ -6,6 +6,7 @@ import {homePageDatas} from '../../data/home';
 import NavLinks from '../Home/NavLinks';
 import ThemeSwitcher from '../ThemeSwitcher';
 import {GlobalContext} from '../../context/GlobalContext';
+import BurgerButton from '../BurgerButton/BurgerButton';
 
 const HeaderContainer = styled.header`
   height: 64px;
@@ -53,7 +54,7 @@ const NavContainer = styled.div`
   }
 `;
 
-const BurgerButton = styled.button`
+const BurgerButton2 = styled.button`
   display: block;
   mask-image: url('/burger_button.svg');
   mask-repeat: no-repeat;
@@ -104,7 +105,8 @@ const Header = () => {
         <Logo>
           <Link href={PATHS.HOME()}>{homePageDatas.myName}</Link>
         </Logo>
-        <BurgerButton theme={theme} onClick={handleBurgerButtonClick} />
+        <BurgerButton />
+        {/* <BurgerButton2 theme={theme} onClick={handleBurgerButtonClick} /> */}
       </MobileContainer>
       {/* {isBurgerMenuOpen && <BurgerMenu />} */}
     </HeaderContainer>
