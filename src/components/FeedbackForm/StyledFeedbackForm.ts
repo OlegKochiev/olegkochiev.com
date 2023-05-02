@@ -14,6 +14,10 @@ const BaseInput = styled.input<{theme: Theme}>`
   border-radius: 4px;
   width: 100%;
   border: solid 1px ${({theme}) => theme.lineColor};
+  &:focus {
+    outline: solid 1px #078080;
+    border-color: transparent;
+  }
 `;
 
 export const StyledFormLegend = styled.legend``;
@@ -33,6 +37,10 @@ export const StyledMessageTextarea = styled.textarea<{theme: Theme}>`
   padding: 7px;
   border-radius: 4px;
   border: solid 1px ${({theme}) => theme.lineColor};
+  &:focus {
+    outline: solid 1px #078080;
+    border-color: transparent;
+  }
 `;
 export const StyledSubmitButton = styled.button`
   align-self: flex-end;
