@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
 import {PATHS} from '../../constants';
 import ThemeContainer from '../../components/ThemeContainer';
+import Footer from '../../components/Footer/Footer';
 
 interface Project {
   tags: string[];
@@ -200,6 +201,7 @@ const Portfolio = () => {
             </Section>
           ))}
         </Main>
+        <Footer />
       </PageContainer>
     </ThemeContainer>
   );

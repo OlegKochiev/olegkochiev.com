@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
 import {Main, Section} from '../portfolio';
 import ThemeContainer from '../../components/ThemeContainer';
+import Footer from '../../components/Footer/Footer';
 
 const Title = styled.p`
   text-align: end;
@@ -75,6 +76,7 @@ const AboutMe = () => {
             </Section>
           ))}
         </Main>
+        <Footer />
       </PageContainer>
     </ThemeContainer>
   );
