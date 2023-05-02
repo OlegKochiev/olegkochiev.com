@@ -15,8 +15,8 @@ const BaseInput = styled.input<{theme: Theme}>`
   width: 100%;
   border: solid 1px ${({theme}) => theme.lineColor};
   &:focus {
-    outline: solid 1px #078080;
-    border-color: transparent;
+    outline: transparent;
+    border-color: #078080;
   }
 `;
 
@@ -38,8 +38,8 @@ export const StyledMessageTextarea = styled.textarea<{theme: Theme}>`
   border-radius: 4px;
   border: solid 1px ${({theme}) => theme.lineColor};
   &:focus {
-    outline: solid 1px #078080;
-    border-color: transparent;
+    outline: transparent;
+    border-color: #078080;
   }
 `;
 export const StyledSubmitButton = styled.button`
