@@ -3,24 +3,11 @@ import {useRouter} from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 import {PATHS} from '../../../constants';
+import {Nav, Span} from './StyledNavMenu';
 
-const Nav = styled.nav`
-  display: flex;
-  gap: 1em;
-`;
-
-const Span = styled.span<{isActive: boolean}>`
-  display: block;
-  padding: 5px 5px;
-  transition: background-color 0.15s, transform 0.15s, color 0.15s;
-  border-bottom: 3px solid transparent;
-  border-color: ${({isActive}) => (isActive ? '#078080' : 'transparent')};
-  &:hover {
-    color: #fff;
-    background-color: #078080;
-    transform: skewY(3deg);
-  }
-`;
+type Props = {
+  isHorizontal?: boolean;
+};
 
 const navLinksData = [
   {
@@ -52,9 +39,9 @@ const NavLink = ({title, path}: {title: string; path: string}) => {
   );
 };
 
-const NavLinks = () => {
+const NavLinks = ({isHorizontal = true}: Props) => {
   return (
-    <Nav>
+    <Nav isHorizontal={isHorizontal}>
       {navLinksData.map((link) => (
         <NavLink key={link.title} path={link.path} title={link.title} />
       ))}

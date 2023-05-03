@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import styled from 'styled-components';
-import NavLinks from '../components/Home/NavLinks';
+import NavLinks from '../components/Home/NavMenu/NavMenu';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import SocialIcons from '../components/Home/SocialIcons';
 import ThemeContainer from '../components/ThemeContainer';
