@@ -6,16 +6,22 @@ export const Bar = styled.span<{theme: Theme}>`
   position: absolute;
   height: 2px;
   background-color: ${({theme}) => theme.color};
-  transition: transform 0.5s, width 0.5s;
+  transition: transform 0.3s, width 0.3s, left 0.3s, top 0.3s, right 0.3s, bottom 0.3s;
 `;
 
 export const StyledBurgerButton = styled.button`
   width: 40px;
   height: 40px;
+`;
+
+export const StyledBarContainer = styled.span`
+  display: block;
+  width: 38px;
+  height: 26px;
   position: relative;
 
   span:nth-of-type(1) {
-    width: 50%;
+    width: 60%;
     top: 0;
     left: 0;
   }
@@ -26,20 +32,24 @@ export const StyledBurgerButton = styled.button`
     transform: translate(0, -50%);
   }
   span:nth-of-type(3) {
-    width: 50%;
+    width: 60%;
     bottom: 0;
     right: 0;
   }
 
   &.active {
     span:nth-of-type(1) {
-      transform: translate(50%, 50%) rotate(-45deg);
+      top: 7px;
+      left: 14px;
+      transform: rotate(-45deg);
     }
     span:nth-of-type(2) {
       transform: rotate(45deg);
     }
     span:nth-of-type(3) {
-      transform: translate(-80%, -80%) rotate(-45deg);
+      bottom: 6px;
+      right: 12px;
+      transform: rotate(-45deg);
     }
   }
 `;

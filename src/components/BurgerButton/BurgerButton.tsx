@@ -1,6 +1,6 @@
 import {useContext, useState} from 'react';
 import {GlobalContext} from '../../context/GlobalContext';
-import {Bar, StyledBurgerButton} from './BurgerButton.styled';
+import {Bar, StyledBarContainer, StyledBurgerButton} from './BurgerButton.styled';
 
 export default function BurgerButton() {
   const [isActive, setActive] = useState(false);
@@ -11,10 +11,12 @@ export default function BurgerButton() {
   };
 
   return (
-    <StyledBurgerButton onClick={handleButtonClick} className={isActive ? 'active' : ''}>
-      <Bar theme={theme} />
-      <Bar theme={theme} />
-      <Bar theme={theme} />
+    <StyledBurgerButton onClick={handleButtonClick}>
+      <StyledBarContainer className={isActive ? 'active' : ''}>
+        <Bar theme={theme} />
+        <Bar theme={theme} />
+        <Bar theme={theme} />
+      </StyledBarContainer>
     </StyledBurgerButton>
   );
 }
