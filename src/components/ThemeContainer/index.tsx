@@ -1,15 +1,31 @@
 import React, {useContext} from 'react';
 import {GlobalContext} from '../../context/GlobalContext';
-import styled from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
+import {Theme} from '../../types';
 
-export const Container = styled.main`
+const GlobalStyle = createGlobalStyle<{theme: Theme}>`
+body {
   min-height: 100vh;
   background-color: ${({theme}) => theme.backgroundColor};
   color: ${({theme}) => theme.color};
   transition: color 0.25s, background-color 0.25s;
+}
 `;
+
+// export const Container = styled.main`
+//   min-height: 100vh;
+//   background-color: ${({theme}) => theme.backgroundColor};
+//   color: ${({theme}) => theme.color};
+//   transition: color 0.25s, background-color 0.25s;
+// `;
 
 export default function ThemeContainer({children}: {children: JSX.Element}) {
   const {theme} = useContext(GlobalContext);
-  return <Container theme={theme}>{children}</Container>;
+  return (
+    <>
+      <GlobalStyle theme={theme} />
+      {children}
+    </>
+  );
+  // return <Container theme={theme}>{children}</Container>;
 }
