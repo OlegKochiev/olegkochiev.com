@@ -12,12 +12,15 @@ export const Bar = styled.span<{theme: Theme}>`
 export const StyledBurgerButton = styled.button`
   width: 40px;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const StyledBarContainer = styled.span`
   display: block;
-  width: 38px;
-  height: 26px;
+  width: 33px;
+  height: 22px;
   position: relative;
 
   span:nth-of-type(1) {
@@ -39,16 +42,16 @@ export const StyledBarContainer = styled.span`
 
   &.active {
     span:nth-of-type(1) {
-      top: 7px;
-      left: 14px;
+      top: 6px;
+      left: 12px;
       transform: rotate(-45deg);
     }
     span:nth-of-type(2) {
       transform: rotate(45deg);
     }
     span:nth-of-type(3) {
-      bottom: 6px;
-      right: 12px;
+      bottom: 4px;
+      right: 11px;
       transform: rotate(-45deg);
     }
   }
