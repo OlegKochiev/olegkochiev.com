@@ -11,7 +11,8 @@ const Title = styled.p`
   text-align: end;
   @media (max-width: 770px) {
     text-align: start;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: bold;
   }
 `;
 const DescriptionsContainer = styled.div``;

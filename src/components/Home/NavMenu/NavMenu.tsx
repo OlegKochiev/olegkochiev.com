@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import React from 'react';
-import styled from 'styled-components';
 import {PATHS} from '../../../constants';
 import {Nav, Span} from './StyledNavMenu';
 
@@ -9,7 +8,7 @@ type Props = {
   isHorizontal?: boolean;
 };
 
-const navLinksData = [
+const pages = [
   {
     path: PATHS.HOME(),
     title: 'Главная',
@@ -42,8 +41,8 @@ const NavLink = ({title, path}: {title: string; path: string}) => {
 const NavLinks = ({isHorizontal = true}: Props) => {
   return (
     <Nav isHorizontal={isHorizontal}>
-      {navLinksData.map((link) => (
-        <NavLink key={link.title} path={link.path} title={link.title} />
+      {pages.map((page) => (
+        <NavLink key={page.title} path={page.path} title={page.title} />
       ))}
     </Nav>
   );
