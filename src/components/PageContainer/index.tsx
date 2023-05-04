@@ -1,24 +1,25 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
+import {GlobalContext} from '../../context/GlobalContext';
+import {Theme} from '../../types';
 
 type Props = {
   children: string | JSX.Element | JSX.Element[];
 };
 
-const Container = styled.div`
+const Container = styled.main<{theme: Theme}>`
   min-height: 100vh;
-  padding: 0 15px 20px;
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 770px) {
-    font-size: 14px;
-    position: relative;
-  }
+  padding: 0 15px 20px;
+  background-color: ${({theme}) => theme.backgroundColor};
+  color: ${({theme}) => theme.color};
+  transition: color 0.25s, background-color 0.25s;
 `;
 
 const PageContainer = ({children}: Props) => {
-  return <Container>{children}</Container>;
+  const {theme} = useContext(GlobalContext);
+  return <Container theme={theme}>{children}</Container>;
 };
 
 export default PageContainer;

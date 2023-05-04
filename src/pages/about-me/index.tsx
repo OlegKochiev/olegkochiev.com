@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
 import {Content, Section} from '../portfolio';
-import ThemeContainer from '../../components/ThemeContainer';
 import Footer from '../../components/Footer/Footer';
 import FeedbackForm from '../../components/FeedbackForm/FeedbackForm';
 
@@ -63,25 +62,23 @@ Git`,
 
 const AboutMe = () => {
   return (
-    <ThemeContainer>
-      <PageContainer>
-        <Header />
-        <Content>
-          {aboutMe.map((info) => (
-            <Section key={info.title}>
-              <Title> {info.title} </Title>
-              <DescriptionsContainer>
-                {info.descriptions.map((description) => (
-                  <Description key={description}>{description}</Description>
-                ))}
-              </DescriptionsContainer>
-            </Section>
-          ))}
-        </Content>
-        <FeedbackForm />
-        <Footer />
-      </PageContainer>
-    </ThemeContainer>
+    <PageContainer>
+      <Header />
+      <Content>
+        {aboutMe.map((info) => (
+          <Section key={info.title}>
+            <Title> {info.title} </Title>
+            <DescriptionsContainer>
+              {info.descriptions.map((description) => (
+                <Description key={description}>{description}</Description>
+              ))}
+            </DescriptionsContainer>
+          </Section>
+        ))}
+      </Content>
+      <FeedbackForm />
+      <Footer />
+    </PageContainer>
   );
 };
 
