@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
-import {Main, Section} from '../portfolio';
+import {Content, Section} from '../portfolio';
 import ThemeContainer from '../../components/ThemeContainer';
 import Footer from '../../components/Footer/Footer';
 import FeedbackForm from '../../components/FeedbackForm/FeedbackForm';
@@ -66,7 +66,7 @@ const AboutMe = () => {
     <ThemeContainer>
       <PageContainer>
         <Header />
-        <Main>
+        <Content>
           {aboutMe.map((info) => (
             <Section key={info.title}>
               <Title> {info.title} </Title>
@@ -77,7 +77,7 @@ const AboutMe = () => {
               </DescriptionsContainer>
             </Section>
           ))}
-        </Main>
+        </Content>
         <FeedbackForm />
         <Footer />
       </PageContainer>

@@ -8,6 +8,9 @@ type Props = {
 const Container = styled.div`
   min-height: 100vh;
   padding: 0 15px 20px;
+  display: flex;
+  flex-direction: column;
+
   @media (max-width: 770px) {
     font-size: 14px;
     position: relative;

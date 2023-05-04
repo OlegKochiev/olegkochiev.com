@@ -66,10 +66,6 @@ const Header = () => {
   const {theme} = useContext(GlobalContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleBurgerButtonClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <>
       <SideMenu isMenuOpen={isMenuOpen} />

@@ -12,89 +12,27 @@ interface Project {
   title: string;
   description: string;
   data: string;
+  link: string;
   stackTechnologies: string[];
 }
 
 const projects: Project[] = [
   {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио5',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
+    tags: ['React', 'frontend', 'SSR', 'SSG'],
+    title: 'Образовательный портал strada',
+    description: 'Платформа для самообразования. ',
     data: '01.01.2023',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио8',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2022',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио1',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2023',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио2',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos hic fugiat dolore totam numquam eum inventore dolores commodi nulla.',
-    data: '01.01.2021',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио3',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2021',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио5',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2023',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио8',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2022',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио1',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2023',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио2',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos hic fugiat dolore totam numquam eum inventore dolores commodi nulla.',
-    data: '01.01.2021',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио3',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2021',
-    stackTechnologies: [],
+    link: 'https://strada.onne',
+    stackTechnologies: ['React', 'NextJS', 'TypeScript', 'Redux(RTK)', 'React hook form', 'MUI(material UI)'],
   },
 ];
 
-export const Main = styled.main`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  margin-bottom: auto;
   @media (max-width: 770px) {
     align-items: flex-start;
     gap: 20px;
@@ -177,7 +115,7 @@ const Portfolio = () => {
     <ThemeContainer>
       <PageContainer>
         <Header />
-        <Main>
+        <Content>
           {projectsByData.map(([year, projects]) => (
             <Section key={year}>
               <Year>{year}</Year>
@@ -200,7 +138,7 @@ const Portfolio = () => {
               </ProjectsContainer>
             </Section>
           ))}
-        </Main>
+        </Content>
         <Footer />
       </PageContainer>
     </ThemeContainer>
