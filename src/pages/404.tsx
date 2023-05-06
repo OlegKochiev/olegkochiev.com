@@ -6,7 +6,7 @@ import SadSmile from '../components/404/SadSmile';
 import DefaultButton from '../components/DefaultComponents/Button';
 import Header from '../components/Header';
 import {PATHS} from '../constants';
-import ThemeContainer from '../components/ThemeContainer';
+import PageContainer from '../components/PageContainer';
 
 const Main = styled.div`
   display: flex;
@@ -15,6 +15,9 @@ const Main = styled.div`
   justify-content: center;
   gap: 20px;
   height: 100%;
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
 `;
 
 const DescContainer = styled.div`
@@ -35,38 +38,34 @@ const H2 = styled.h2`
 
 const Desc = styled.p``;
 
-const Button = styled(DefaultButton)``;
-const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 20px 15px;
+const Button = styled(DefaultButton)`
+  @media (max-width: 770px) {
+    align-self: flex-end;
+  }
 `;
 
 const Error404 = () => {
   return (
-    <ThemeContainer>
-      <PageContainer>
-        <Header />
-        <Main>
-          <Cosmonaut />
-          <DescContainer>
-            <H1>404</H1>
-            <H2>
-              Упс! Похоже что ты заблудился <SadSmile />
-            </H2>
+    <PageContainer>
+      <Header />
+      <Main>
+        <Cosmonaut />
+        <DescContainer>
+          <H1>404</H1>
+          <H2>
+            Упс! Похоже что ты заблудился <SadSmile />
+          </H2>
 
-            <Desc>
-              Страница, которую ты ищешь, не существует. Как ты сюда попал, остается загадкой. Но ты можешь нажать на
-              кнопку ниже, чтобы вернуться на главную страницу.
-            </Desc>
-            <Button>
-              <Link href={PATHS.HOME()}>На главную</Link>
-            </Button>
-          </DescContainer>
-        </Main>
-      </PageContainer>
-    </ThemeContainer>
+          <Desc>
+            Страница, которую ты ищешь, не существует. Как ты сюда попал, остается загадкой. Но ты можешь нажать на
+            кнопку ниже, чтобы вернуться на главную страницу.
+          </Desc>
+          <Button>
+            <Link href={PATHS.HOME()}>На главную</Link>
+          </Button>
+        </DescContainer>
+      </Main>
+    </PageContainer>
   );
 };
 

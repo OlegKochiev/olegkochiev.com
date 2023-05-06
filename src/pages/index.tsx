@@ -3,18 +3,18 @@ import styled from 'styled-components';
 import NavLinks from '../components/Home/NavMenu/NavMenu';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import SocialIcons from '../components/Home/SocialIcons';
-import ThemeContainer from '../components/ThemeContainer';
 import VerticalLine from '../components/Home/VerticalLine';
 import MyImage from '../components/Home/MyImage';
 import {homePageDatas} from '../data/home';
+import PageContainer from '../components/PageContainer';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  padding: 20px 15px;
+  flex-grow: 1;
+  padding: 20px 15px 0;
 `;
 const Info = styled.div`
   display: flex;
@@ -48,7 +48,7 @@ export const MyName = styled.h1`
 
 export default function Home() {
   return (
-    <ThemeContainer>
+    <PageContainer>
       <Container>
         <ThemeSwitcher />
         <Info>
@@ -61,6 +61,6 @@ export default function Home() {
         </Info>
         <SocialIcons />
       </Container>
-    </ThemeContainer>
+    </PageContainer>
   );
 }

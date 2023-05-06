@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
 import {PATHS} from '../../constants';
-import ThemeContainer from '../../components/ThemeContainer';
 import Footer from '../../components/Footer/Footer';
 
 interface Project {
@@ -12,89 +11,27 @@ interface Project {
   title: string;
   description: string;
   data: string;
+  link: string;
   stackTechnologies: string[];
 }
 
 const projects: Project[] = [
   {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио5',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
+    tags: ['React', 'frontend', 'SSR', 'SSG'],
+    title: 'Образовательный портал strada',
+    description: 'Платформа для самообразования. ',
     data: '01.01.2023',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио8',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2022',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио1',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2023',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио2',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos hic fugiat dolore totam numquam eum inventore dolores commodi nulla.',
-    data: '01.01.2021',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио3',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2021',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио5',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2023',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио8',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2022',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио1',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2023',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио2',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos hic fugiat dolore totam numquam eum inventore dolores commodi nulla.',
-    data: '01.01.2021',
-    stackTechnologies: [],
-  },
-  {
-    tags: ['react', 'next.js'],
-    title: 'Создание собственного сайта портфолио3',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, deserunt.',
-    data: '01.01.2021',
-    stackTechnologies: [],
+    link: 'https://strada.onne',
+    stackTechnologies: ['React', 'NextJS', 'TypeScript', 'Redux(RTK)', 'React hook form', 'MUI(material UI)'],
   },
 ];
 
-export const Main = styled.main`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  margin-bottom: auto;
   @media (max-width: 770px) {
     align-items: flex-start;
     gap: 20px;
@@ -174,36 +111,34 @@ const Portfolio = () => {
   const projectsByData = Object.entries(projectsByYear);
 
   return (
-    <ThemeContainer>
-      <PageContainer>
-        <Header />
-        <Main>
-          {projectsByData.map(([year, projects]) => (
-            <Section key={year}>
-              <Year>{year}</Year>
-              <ProjectsContainer>
-                {projects.map((project, index) => (
-                  <Article key={project.title + index}>
-                    <Tags>
-                      {project.tags.map((tag) => (
-                        <Link key={tag} href={PATHS.PORTFOLIO.BY_TAG(tag)}>
-                          <Tag>#{tag}</Tag>
-                        </Link>
-                      ))}
-                    </Tags>
-                    <Link href={PATHS.PORTFOLIO.BY_NAME(project.title)}>
-                      <Title>{project.title}</Title>
-                    </Link>
-                    <Description>{project.description}</Description>
-                  </Article>
-                ))}
-              </ProjectsContainer>
-            </Section>
-          ))}
-        </Main>
-        <Footer />
-      </PageContainer>
-    </ThemeContainer>
+    <PageContainer>
+      <Header />
+      <Content>
+        {projectsByData.map(([year, projects]) => (
+          <Section key={year}>
+            <Year>{year}</Year>
+            <ProjectsContainer>
+              {projects.map((project, index) => (
+                <Article key={project.title + index}>
+                  <Tags>
+                    {project.tags.map((tag) => (
+                      <Link key={tag} href={PATHS.PORTFOLIO.BY_TAG(tag)}>
+                        <Tag>#{tag}</Tag>
+                      </Link>
+                    ))}
+                  </Tags>
+                  <Link href={PATHS.PORTFOLIO.BY_NAME(project.title)}>
+                    <Title>{project.title}</Title>
+                  </Link>
+                  <Description>{project.description}</Description>
+                </Article>
+              ))}
+            </ProjectsContainer>
+          </Section>
+        ))}
+      </Content>
+      <Footer />
+    </PageContainer>
   );
 };
 
