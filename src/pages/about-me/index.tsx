@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
 import PageContainer from '../../components/PageContainer';
 import {Content, Section} from '../portfolio';
 import Footer from '../../components/Footer/Footer';

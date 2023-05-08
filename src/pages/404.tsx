@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Cosmonaut from '../components/404/Cosmonaut';
 import SadSmile from '../components/404/SadSmile';
 import DefaultButton from '../components/DefaultComponents/Button';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import {PATHS} from '../constants';
 import PageContainer from '../components/PageContainer';
 
