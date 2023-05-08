@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import NavLinks from '../components/Home/NavMenu/NavMenu';
 import ThemeSwitcher from '../components/ThemeSwitcher';

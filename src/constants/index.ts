@@ -34,6 +34,19 @@ const ERRORS = {
   },
 };
 
+const MEDIA_QUERIES = [
+  {
+    size: 'isMobile',
+    rule: '(max-width: 766px)',
+  },
+  {
+    size: 'isDesktop',
+    rule: '(min-width: 767px)',
+  },
+];
+
+// const MEDIA_QUERIES = ['(max-width: 766px)', '(min-width: 767px)'];
+
 const TABS = {
   PORTFOLIO: 'portfolio',
   EDUCATION: 'education',
@@ -42,4 +55,4 @@ const TABS = {
 
 const DEFAULT_ACTIVE_TAB = TABS.EDUCATION;
 
-export {PATHS, THEME, ERRORS, TABS, DEFAULT_ACTIVE_TAB};
+export {PATHS, THEME, ERRORS, TABS, DEFAULT_ACTIVE_TAB, MEDIA_QUERIES};
