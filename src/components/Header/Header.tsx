@@ -1,14 +1,14 @@
-import Link from 'next/link';
 import React, {useContext, useState} from 'react';
+import useMatchMedia from '../../hooks/useMatchMedia';
+import Link from 'next/link';
 import {GlobalContext} from '../../context/GlobalContext';
-import {PATHS} from '../../constants';
 import {homePageDatas} from '../../data/home';
 import NavLinks from '../Home/NavMenu/NavMenu';
 import ThemeSwitcher from '../ThemeSwitcher';
 import BurgerButton from '../BurgerButton/BurgerButton';
 import SideMenu from '../SideMenu/SideMenu';
 import {GridContainer, HeaderContainer, Logo, NavContainer} from './StyledHeader';
-import useMatchMedia from '../../hooks/useMatchMedia';
+import {PATHS} from '../../constants';
 
 const Header = () => {
   const {isMobile} = useMatchMedia();

@@ -1,15 +1,15 @@
-import {useState, useLayoutEffect} from 'react';
+import {useState, useEffect} from 'react';
 import {MEDIA_QUERIES} from '../constants';
 
-type Medias = {
+type Screens = {
   isMobile?: boolean;
   isLaptop?: boolean;
   isDesktop?: boolean;
 };
 
-export default function useMatchMedia(): Medias {
+export default function useMatchMedia(): Screens {
   const [values, setValues] = useState<boolean[]>([]);
-  useLayoutEffect(() => {
+  useEffect(() => {
     const mediaQueryLists = MEDIA_QUERIES.map((query) => matchMedia(query.rule));
     const getValues = () => mediaQueryLists.map((mediaQueryList) => mediaQueryList.matches);
     setValues(getValues);
