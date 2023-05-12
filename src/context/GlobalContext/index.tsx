@@ -1,10 +1,10 @@
-import {createContext} from 'react';
+import {ReactElement, createContext} from 'react';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import {THEME} from '../../constants';
 import {Theme} from '../../types';
 
 type Props = {
-  children: string | JSX.Element | JSX.Element[];
+  children: ReactElement | ReactElement[];
 };
 
 export const GlobalContext = createContext({

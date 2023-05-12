@@ -1,10 +1,10 @@
-import React, {useContext} from 'react';
+import React, {ReactElement, useContext} from 'react';
 import styled from 'styled-components';
 import {GlobalContext} from '../../context/GlobalContext';
 import {Theme} from '../../types';
 
 type Props = {
-  children: string | JSX.Element | JSX.Element[];
+  children: ReactElement | ReactElement[];
 };
 
 const Container = styled.main<{theme: Theme}>`
