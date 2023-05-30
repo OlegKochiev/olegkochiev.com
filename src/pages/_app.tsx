@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import {useRouter} from 'next/router';
 import type {AppProps} from 'next/app';
+import {Analytics} from '@vercel/analytics/react';
 import {PAGES} from '../constants';
 import GlobalContextProvider from '../context/GlobalContext';
 
@@ -50,6 +51,7 @@ export default function App({Component, pageProps}: AppProps) {
         <meta name="format-detection" content="telephone=no"></meta>
       </Head>
       <Component {...pageProps} />
+      <Analytics />
     </GlobalContextProvider>
   );
 }
