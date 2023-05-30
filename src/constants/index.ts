@@ -26,6 +26,27 @@ const THEME = {
   },
 };
 
+const PAGES = {
+  HOME: {
+    TITLE: 'Сайт портфолио',
+    PATH: () => '/',
+  },
+  PORTFOLIO: {
+    TITLE: 'Портфолио',
+    PATH: () => '/portfolio',
+    BY_NAME: (name: string) => `/portfolio/${name}`,
+    BY_TAG: (tag: string) => `/portfolio/tag/${tag}`,
+  },
+  ABOUT_ME: {
+    TITLE: 'Обо мне',
+    PATH: () => '/about-me',
+  },
+  EDUCATION: {
+    TITLE: 'Образование',
+    PATH: () => '/education',
+  },
+};
+
 const ERRORS = {
   FIELD: {
     IS_REQUIRED: 'Это поле обязательно для заполнения!',
@@ -55,4 +76,4 @@ const TABS = {
 
 const DEFAULT_ACTIVE_TAB = TABS.EDUCATION;
 
-export {PATHS, THEME, ERRORS, TABS, DEFAULT_ACTIVE_TAB, MEDIA_QUERIES};
+export {PAGES, THEME, ERRORS, TABS, DEFAULT_ACTIVE_TAB, MEDIA_QUERIES};

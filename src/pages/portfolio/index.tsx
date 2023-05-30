@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from '../../components/Header/Header';
 import PageContainer from '../../components/PageContainer';
-import {PATHS} from '../../constants';
+import {PAGES} from '../../constants';
 import Footer from '../../components/Footer/Footer';
 
 interface Project {
@@ -122,12 +122,12 @@ const Portfolio = () => {
                 <Article key={project.title + index}>
                   <Tags>
                     {project.tags.map((tag) => (
-                      <Link key={tag} href={PATHS.PORTFOLIO.BY_TAG(tag)}>
+                      <Link key={tag} href={PAGES.PORTFOLIO.BY_TAG(tag)}>
                         <Tag>#{tag}</Tag>
                       </Link>
                     ))}
                   </Tags>
-                  <Link href={PATHS.PORTFOLIO.BY_NAME(project.title)}>
+                  <Link href={PAGES.PORTFOLIO.BY_NAME(project.title)}>
                     <Title>{project.title}</Title>
                   </Link>
                   <Description>{project.description}</Description>

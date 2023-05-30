@@ -8,7 +8,7 @@ import ThemeSwitcher from '../ThemeSwitcher';
 import BurgerButton from '../BurgerButton/BurgerButton';
 import SideMenu from '../SideMenu/SideMenu';
 import {GridContainer, HeaderContainer, Logo, NavContainer} from './StyledHeader';
-import {PATHS} from '../../constants';
+import {PAGES} from '../../constants';
 
 const Header = () => {
   const {isMobile} = useMatchMedia();
@@ -22,7 +22,7 @@ const Header = () => {
       <HeaderContainer theme={theme}>
         <GridContainer>
           <Logo>
-            <Link href={PATHS.HOME()}>{homePageDatas.myName}</Link>
+            <Link href={PAGES.HOME.PATH()}>{homePageDatas.myName}</Link>
           </Logo>
           <NavContainer>
             <NavLinks />
