@@ -37,10 +37,10 @@ const SocialIcons = () => {
   const {theme} = useContext(GlobalContext);
   return (
     <Ul>
-      {socialIconsDatas.map(({name, href, imgSrc, bgColor}) => (
+      {socialIconsDatas.map(({name, ariaLabel, href, imgSrc, bgColor}) => (
         <Li key={name}>
           <Link href={href} target="_blank">
-            <Social iconSrc={imgSrc} bgColor={bgColor} theme={theme} />
+            <Social iconSrc={imgSrc} bgColor={bgColor} theme={theme} aria-label={ariaLabel} />
           </Link>
         </Li>
       ))}

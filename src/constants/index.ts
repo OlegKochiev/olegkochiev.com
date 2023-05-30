@@ -37,13 +37,13 @@ const PAGES = {
     BY_NAME: (name: string) => `/portfolio/${name}`,
     BY_TAG: (tag: string) => `/portfolio/tag/${tag}`,
   },
-  ABOUT_ME: {
-    TITLE: 'Обо мне',
-    PATH: () => '/about-me',
-  },
   EDUCATION: {
     TITLE: 'Образование',
     PATH: () => '/education',
+  },
+  ABOUT_ME: {
+    TITLE: 'Обо мне',
+    PATH: () => '/about-me',
   },
 };
 
