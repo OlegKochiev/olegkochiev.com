@@ -2,22 +2,21 @@ import React from 'react';
 import Head from 'next/head';
 import {useRouter} from 'next/router';
 import type {AppProps} from 'next/app';
+import {PAGES} from '../constants';
 import GlobalContextProvider from '../context/GlobalContext';
 
 import '../styles/globals.scss';
-import {PAGES} from '../constants';
 
 export default function App({Component, pageProps}: AppProps) {
   const {pathname} = useRouter();
-
   const pageTitle = Object.values(PAGES).find((page) => page.PATH() === pathname)?.TITLE;
-
+  const title = `Олег Кочиев | ${pageTitle}`;
   return (
     <GlobalContextProvider>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-        <title>Олег Кочиев | {pageTitle}</title>
+        <title>{title}</title>
         <link type="image/x-icon" rel="icon" href="/favicon.ico" />
         <link type="image/png" sizes="16x16" rel="icon" href="/icons/favicon-16x16.png" />
         <link type="image/png" sizes="32x32" rel="icon" href="/icons/favicon-32x32.png" />

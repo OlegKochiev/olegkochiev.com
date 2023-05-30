@@ -28,7 +28,7 @@ const THEME = {
 
 const PAGES = {
   HOME: {
-    TITLE: 'Сайт портфолио',
+    TITLE: 'Главная',
     PATH: () => '/',
   },
   PORTFOLIO: {
