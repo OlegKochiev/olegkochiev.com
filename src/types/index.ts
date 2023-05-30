@@ -10,4 +10,12 @@ export interface Theme {
   mode: string;
 }
 
+export interface Project {
+  title: string;
+  description: string;
+  hashtags: string[];
+  date: Date;
+  images: Blob[];
+}
+
 export type {ThemeSwitcher};
