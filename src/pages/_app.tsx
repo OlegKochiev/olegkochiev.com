@@ -15,6 +15,7 @@ export default function App({Component, pageProps}: AppProps) {
     <GlobalContextProvider>
       <Head>
         <meta charSet="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
         <link type="image/x-icon" rel="icon" href="/favicon.ico" />
@@ -32,6 +33,28 @@ export default function App({Component, pageProps}: AppProps) {
         <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
+        <meta name="description" content="My personal portfolio site"></meta>
+        <meta name="description" content="Мой сайт портфолио"></meta>
+        <meta
+          name="description"
+          content="Мой песрональный сайт - портфолио. Содержит информацию обо всех реализованных мной проектах, образовательных курсах которые я прошел, а так же, содержит общую информацию обо мне."
+        ></meta>
+        <meta
+          name="description"
+          content="My personal portfolio website. Contains information about all the projects I have implemented, the educational courses I have taken, as well as contains general information about me."
+        ></meta>
+        <meta name="keywords" content="frontend developer react javascript artisan github css html web "></meta>
+        <meta name="author" content="Кочиев Олег"></meta>
+        <meta name="author" content="Kochiev Oleg"></meta>
+        <meta name="robots" content="index, follow"></meta>
+        <meta name="format-detection" content="telephone=no"></meta>
+        <meta name="google-site-verification" content="1234567890"></meta>
+        <meta property="og:title" content="Олег Кочиев - фронтенд разработчик"></meta>
+        <meta
+          property="og:description"
+          content="Персональный сайт портфолио, фронтенд разработчика - Кочиева Олега"
+        ></meta>
+        <meta property="og:url" content="https://www.olegkochiev.ru/"></meta>
       </Head>
       <Component {...pageProps} />
     </GlobalContextProvider>
