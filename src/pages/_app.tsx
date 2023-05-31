@@ -49,6 +49,7 @@ export default function App({Component, pageProps}: AppProps) {
         <meta name="author" content="Kochiev Oleg"></meta>
         <meta name="robots" content="index, follow"></meta>
         <meta name="format-detection" content="telephone=no"></meta>
+        <meta name="google-site-verification" content="KY09ij96lZwrOJQPB40D0yoiCSg8FLt0nYsv5DuDnrU" />
       </Head>
       <Component {...pageProps} />
       <Analytics />
