@@ -16,7 +16,7 @@ export default function App({Component, pageProps}: AppProps) {
     <GlobalContextProvider>
       <Head>
         <meta charSet="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge"></meta>
+        <meta httpEquiv="x-ua-compatible" content="ie=edge"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
         <link type="image/x-icon" rel="icon" href="/favicon.ico" />
