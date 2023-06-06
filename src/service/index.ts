@@ -1,3 +1,5 @@
+import connectToDatabase from '../service/mongodb/index';
+
 interface Course {
   title: string;
   description: string;
@@ -7,17 +9,8 @@ interface Course {
 }
 
 const getCourses = async () => {
-  const courses = [
-    {
-      title: 'course1',
-    },
-    {
-      title: 'course2',
-    },
-    {
-      title: 'course3',
-    },
-  ];
+  const {client, db} = await connectToDatabase();
+  const courses = await db.collection('courses');
   return courses;
 };
 const addCourse = async (course: Course) => {};
