@@ -1,3 +1,5 @@
+import {ObjectId} from 'mongoose';
+
 type ThemeSwitcher = {
   OnOff: boolean;
 };
@@ -11,11 +13,19 @@ export interface Theme {
 }
 
 export interface Project {
+  id?: ObjectId;
   title: string;
   description: string;
-  hashtags: string[];
-  date: Date;
-  images: Blob[];
+  startedAt: Date;
+  finishedAt: Date;
+}
+
+export interface Course {
+  id?: ObjectId;
+  title: string;
+  description: string;
+  startedAt: Date;
+  finishedAt: Date;
 }
 
 export type {ThemeSwitcher};

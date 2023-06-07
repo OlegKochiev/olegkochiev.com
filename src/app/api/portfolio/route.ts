@@ -1,10 +1,10 @@
-import {getCourses, addCourse, updateCourse, deleteCourse} from '../../../services/db/education';
+import {getProjects, addProject, updateProject, deleteProject} from '../../../services/db/projects';
 import {NextRequest, NextResponse} from 'next/server';
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
-    const courses = await getCourses();
-    return NextResponse.json(courses, {status: 200});
+    const projects = await getProjects();
+    return NextResponse.json(projects, {status: 200});
   } catch (error) {
     return NextResponse.json(error, {status: 500});
   }
@@ -12,8 +12,8 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
-    const course = await req.json();
-    await addCourse(course);
+    const project = await req.json();
+    await addProject(project);
     return NextResponse.json('Success', {status: 200});
   } catch (error) {
     return NextResponse.json(error, {status: 500});
@@ -22,8 +22,8 @@ export async function POST(req: NextRequest) {
 
 export async function PUT(req: NextRequest) {
   try {
-    const {id, course} = await req.json();
-    await updateCourse(id, course);
+    const {id, project} = await req.json();
+    await updateProject(id, project);
     return NextResponse.json('Success', {status: 200});
   } catch (error) {
     return NextResponse.json(error, {status: 500});
@@ -34,7 +34,7 @@ export async function DELETE(req: NextRequest) {
   try {
     const id = req.nextUrl.searchParams.get('id');
     if (id) {
-      await deleteCourse(id);
+      await deleteProject(id);
     }
     return NextResponse.json('Success', {status: 200});
   } catch (error) {
