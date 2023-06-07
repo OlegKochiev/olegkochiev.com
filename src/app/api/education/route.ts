@@ -16,7 +16,7 @@ export async function DELETE(req: NextRequest) {
     console.log(reqBody);
 
     // await deleteCourse(id);
-    return new NextResponse('Course deleted', {status: 200});
+    return NextResponse.json(reqBody, {status: 200});
   } catch (error) {
     console.log(error);
 
