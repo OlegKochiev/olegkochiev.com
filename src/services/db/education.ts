@@ -23,7 +23,7 @@ const updateCourse = async (id: ObjectId, course: Course) => {
   await connect();
   await Courses.findByIdAndUpdate(id, course);
 };
-const deleteCourse = async (id: string) => {
+const deleteCourse = async (id: ObjectId) => {
   await connect();
   await Courses.findByIdAndDelete(id);
 };
