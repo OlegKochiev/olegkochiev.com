@@ -10,7 +10,7 @@ import '../styles/globals.scss';
 
 export default function App({Component, pageProps}: AppProps) {
   const {pathname} = useRouter();
-  const pageTitle = Object.values(PAGES).find((page) => page.PATH() === pathname)?.TITLE;
+  const pageTitle = Object.values(PAGES).find((page) => page.path() === pathname)?.title;
   const title = `Олег Кочиев | ${pageTitle}`;
   return (
     <GlobalContextProvider>

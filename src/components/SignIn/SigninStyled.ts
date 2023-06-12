@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import DefaultButton from '../DefaultComponents/Button';
 
 const Container = styled.div`
   display: flex;
@@ -23,6 +24,10 @@ const Form = styled.form`
 const Title = styled.h1`
   font-size: 22px;
   align-self: center;
+`;
+
+export const ButtonLeft = styled(DefaultButton)`
+  align-self: flex-end;
 `;
 
 const Button = styled.button`

@@ -22,7 +22,7 @@ const Header = () => {
       <HeaderContainer theme={theme}>
         <GridContainer>
           <Logo>
-            <Link href={PAGES.HOME.PATH()}>{homePageDatas.myName}</Link>
+            <Link href={PAGES.HOME.path()}>{homePageDatas.myName}</Link>
           </Logo>
           <NavContainer>
             <NavLinks />

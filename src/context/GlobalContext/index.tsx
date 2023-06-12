@@ -2,6 +2,7 @@ import {ReactElement, createContext} from 'react';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import {THEME} from '../../constants';
 import {Theme} from '../../types';
+import {SessionProvider} from 'next-auth/react';
 
 type Props = {
   children: ReactElement | ReactElement[];
@@ -26,7 +27,7 @@ const GlobalContextProvider = ({children}: Props) => {
         themeSwitchHandler: themeSwitchHandler,
       }}
     >
-      {children}
+      <SessionProvider>{children}</SessionProvider>
     </GlobalContext.Provider>
   );
 };

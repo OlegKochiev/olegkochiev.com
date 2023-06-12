@@ -38,7 +38,7 @@ const H2 = styled.h2`
 
 const Desc = styled.p``;
 
-const Button = styled(DefaultButton)`
+export const Button = styled(DefaultButton)`
   @media (max-width: 770px) {
     align-self: flex-end;
   }
@@ -61,7 +61,7 @@ const Error404 = () => {
             кнопку ниже, чтобы вернуться на главную страницу.
           </Desc>
           <Button>
-            <Link href={PAGES.HOME.PATH()}>На главную</Link>
+            <Link href={PAGES.HOME.path()}>На главную</Link>
           </Button>
         </DescContainer>
       </Main>

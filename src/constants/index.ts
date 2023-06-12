@@ -1,15 +1,3 @@
-const PATHS = {
-  HOME: () => '/',
-  PORTFOLIO: {
-    ALL: () => '/portfolio',
-    BY_NAME: (name: string) => `/portfolio/${name}`,
-    BY_TAG: (tag: string) => `/portfolio/tag/${tag}`,
-  },
-  ABOUT_ME: () => '/about-me',
-  EDUCATION: () => '/education',
-  ADMIN: () => '/admin',
-};
-
 const THEME = {
   DARK: {
     mode: 'dark',
@@ -29,34 +17,38 @@ const THEME = {
 
 const PAGES = {
   HOME: {
-    TITLE: 'Главная',
-    PATH: () => '/',
+    title: 'Главная',
+    path: () => '/',
   },
   PORTFOLIO: {
-    TITLE: 'Портфолио',
-    PATH: () => '/portfolio',
-    BY_NAME: (name: string) => `/portfolio/${name}`,
-    BY_TAG: (tag: string) => `/portfolio/tag/${tag}`,
+    title: 'Портфолио',
+    path: () => '/portfolio',
+    byName: (name: string) => `/portfolio/${name}`,
+    byTag: (tag: string) => `/portfolio/tag/${tag}`,
   },
   EDUCATION: {
-    TITLE: 'Образование',
-    PATH: () => '/education',
+    title: 'Образование',
+    path: () => '/education',
   },
   ABOUT_ME: {
-    TITLE: 'Обо мне',
-    PATH: () => '/about-me',
+    title: 'Обо мне',
+    path: () => '/about-me',
   },
   ADMIN: {
-    TITLE: 'Панель администратора',
-    PATH: () => '/admin',
+    title: 'Панель администратора',
+    path: () => '/admin',
+  },
+  LOGIN: {
+    title: 'Войти',
+    path: () => '/signin',
   },
 };
 
 const ERRORS = {
   FIELD: {
     IS_REQUIRED: 'Это поле обязательно для заполнения!',
-    MIN_LENGTH: (length: number) => `Количество введенных символов должно быть не менее ${length}!`,
-    MAX_LENGTH: (length: number) => `Количество введенных символов должно быть не более ${length}!`,
+    MIN_LENGTH: (length: number) => `Количество введенных символов должно быть не менее ${length}.`,
+    MAX_LENGTH: (length: number) => `Количество введенных символов должно быть не более ${length}.`,
   },
 };
 
@@ -70,8 +62,6 @@ const MEDIA_QUERIES = [
     rule: '(min-width: 767px)',
   },
 ];
-
-// const MEDIA_QUERIES = ['(max-width: 766px)', '(min-width: 767px)'];
 
 const TABS = {
   PORTFOLIO: 'portfolio',

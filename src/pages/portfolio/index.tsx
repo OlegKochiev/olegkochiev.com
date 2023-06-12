@@ -122,12 +122,12 @@ const Portfolio = () => {
                 <Article key={project.title + index}>
                   <Tags>
                     {project.tags.map((tag) => (
-                      <Link key={tag} href={PAGES.PORTFOLIO.BY_TAG(tag)}>
+                      <Link key={tag} href={PAGES.PORTFOLIO.byTag(tag)}>
                         <Tag>#{tag}</Tag>
                       </Link>
                     ))}
                   </Tags>
-                  <Link href={PAGES.PORTFOLIO.BY_NAME(project.title)}>
+                  <Link href={PAGES.PORTFOLIO.byName(project.title)}>
                     <Title>{project.title}</Title>
                   </Link>
                   <Description>{project.description}</Description>

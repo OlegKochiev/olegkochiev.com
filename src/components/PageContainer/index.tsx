@@ -1,13 +1,13 @@
-import React, {ReactElement, useContext} from 'react';
+import React, {ReactElement, ReactNode, useContext} from 'react';
 import styled from 'styled-components';
 import {GlobalContext} from '../../context/GlobalContext';
 import {Theme} from '../../types';
 
 type Props = {
-  children: ReactElement | ReactElement[];
+  children: ReactNode;
 };
 
-const Container = styled.main<{theme: Theme}>`
+const Main = styled.main<{theme: Theme}>`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ const Container = styled.main<{theme: Theme}>`
 
 const PageContainer = ({children}: Props) => {
   const {theme} = useContext(GlobalContext);
-  return <Container theme={theme}>{children}</Container>;
+  return <Main theme={theme}>{children}</Main>;
 };
 
 export default PageContainer;
