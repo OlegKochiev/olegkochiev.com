@@ -28,4 +28,9 @@ export interface Course {
   finishedAt: Date;
 }
 
+export interface User {
+  email: string;
+  password: string;
+}
+
 export type {ThemeSwitcher};

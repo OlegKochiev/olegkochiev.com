@@ -7,6 +7,7 @@ const PATHS = {
   },
   ABOUT_ME: () => '/about-me',
   EDUCATION: () => '/education',
+  ADMIN: () => '/admin',
 };
 
 const THEME = {
@@ -44,6 +45,10 @@ const PAGES = {
   ABOUT_ME: {
     TITLE: 'Обо мне',
     PATH: () => '/about-me',
+  },
+  ADMIN: {
+    TITLE: 'Панель администратора',
+    PATH: () => '/admin',
   },
 };
 

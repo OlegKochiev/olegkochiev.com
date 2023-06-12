@@ -1,23 +1,23 @@
 import {ObjectId} from 'mongoose';
-import connect from '../../utils/db/mongodb-connect';
+import dbConnect from '../../utils/db/mongodb-connect';
 import Projects from '../../models/projects';
 import {Project} from '../../types';
 
 const getProjects = async () => {
-  await connect();
+  await dbConnect();
   const projects = await Projects.find({});
   return projects;
 };
 const addProject = async (project: Project) => {
-  await connect();
+  await dbConnect();
   await Projects.create(project);
 };
 const updateProject = async (id: ObjectId, project: Project) => {
-  await connect();
+  await dbConnect();
   await Projects.findByIdAndUpdate(id, {...project});
 };
 const deleteProject = async (id: ObjectId | string) => {
-  await connect();
+  await dbConnect();
   await Projects.findByIdAndRemove(id);
 };
 

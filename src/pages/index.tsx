@@ -52,7 +52,7 @@ export default function Home() {
       <Container>
         <ThemeSwitcher />
         <Info>
-          <MyImage />
+          <MyImage width="130px" />
           <VerticalLine />
           <UserInfo>
             <MyName>{homePageDatas.myName}</MyName>
@@ -64,3 +64,5 @@ export default function Home() {
     </PageContainer>
   );
 }
+
+export {MyImage};
