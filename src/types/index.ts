@@ -1,5 +1,11 @@
 import {ObjectId} from 'mongoose';
 
+enum Role {
+  Admin = 'admin',
+  Moderator = 'moderator',
+  User = 'user',
+}
+
 type ThemeSwitcher = {
   OnOff: boolean;
 };

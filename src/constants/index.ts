@@ -37,6 +37,10 @@ const PAGES = {
   ADMIN: {
     title: 'Панель администратора',
     path: () => '/admin',
+    ABOUT_LIFE: {
+      title: 'О жизни',
+      path: () => `/admin/about-life`,
+    },
   },
   LOGIN: {
     title: 'Войти',
