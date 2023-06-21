@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 import styled from 'styled-components';
-import {PAGES} from '../../../constants';
+import {PAGES} from '../../../../constants';
 
 const Card = styled.article`
   display: flex;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import LifeCard from '../../../components/Admin/AboutLife/LifeCard';
+import LifeCard from '../../../components/Admin/AboutLife/LifeCard/LifeCard';
 import {Main} from '../../../components/PageContainer';
 
 const mockData = [
@@ -30,7 +30,7 @@ const mockData = [
   },
 ];
 
-const Container = styled(Main)`
+export const Container = styled(Main)`
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -42,7 +42,7 @@ const Container = styled(Main)`
   font-family: 'Nunito';
 `;
 
-const LifeCardsContainer = styled.section`
+export const LifeCardsContainer = styled.section`
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, minmax(auto, 550px));

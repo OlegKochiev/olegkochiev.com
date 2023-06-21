@@ -1,5 +1,20 @@
 import {ObjectId} from 'mongoose';
 
+// type Status = 'done' | 'inProgress' | 'todo';
+// type Priority = 'high' | 'medium' | 'low';
+
+export enum Status {
+  Done = 'Done',
+  InProgress = 'InProgress',
+  ToDo = 'ToDo',
+}
+
+export enum Priority {
+  High = 'High',
+  Medium = 'Medium',
+  Low = 'Low',
+}
+
 enum Role {
   Admin = 'admin',
   Moderator = 'moderator',
