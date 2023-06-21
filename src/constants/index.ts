@@ -40,6 +40,7 @@ const PAGES = {
     ABOUT_LIFE: {
       title: 'О жизни',
       path: () => `/admin/about-life`,
+      byLifeItem: (item: string, subitem: string) => `/admin/about-life/${item}/${subitem}`,
     },
   },
   LOGIN: {

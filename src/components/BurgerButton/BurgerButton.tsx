@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react';
+import {useContext} from 'react';
 import {GlobalContext} from '../../context/GlobalContext';
 import {Bar, StyledBarContainer, StyledBurgerButton} from './BurgerButton.styled';
 

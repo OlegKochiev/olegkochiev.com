@@ -7,7 +7,7 @@ type Props = {
   children: ReactNode;
 };
 
-const Main = styled.main<{theme: Theme}>`
+export const Main = styled.main<{theme: Theme}>`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
