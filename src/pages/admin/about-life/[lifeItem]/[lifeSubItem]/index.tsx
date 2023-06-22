@@ -3,20 +3,24 @@ import {Container, LifeCardsContainer} from '../..';
 import WideCard from '../../../../../components/Admin/AboutLife/WideCard/WideCard';
 import {Priority, Status} from '../../../../../types';
 import styled from 'styled-components';
+import {Title} from '../../../../../components/Admin/AboutLife/PageTitle/StyledPageTitle';
 
 const problemsTasks = [
   {
-    title: 'Task1',
+    id: '1',
+    title: 'Tasweff few k1',
     status: Status.Done,
     priority: Priority.Low,
   },
   {
-    title: 'Task2',
+    id: '2',
+    title: 'wef few f',
     status: Status.InProgress,
     priority: Priority.High,
   },
   {
-    title: 'Task3',
+    id: '3',
+    title: 'Taskwf f fewwefw 3',
     status: Status.ToDo,
     priority: Priority.Medium,
   },
@@ -24,16 +28,19 @@ const problemsTasks = [
 
 const featuresTasks = [
   {
-    title: 'Task1',
+    id: '1',
+    title: 'Taswdwe wfe wef k1',
     status: Status.Done,
     priority: Priority.Medium,
   },
   {
-    title: 'Task2',
+    id: '2',
+    title: 'Task2jdnkfw wjenfwefljkwef wefj wef',
     status: Status.InProgress,
     priority: Priority.Medium,
   },
   {
+    id: '3',
     title: 'Task3',
     status: Status.InProgress,
     priority: Priority.High,
@@ -48,7 +55,7 @@ const WideCardsContainer = styled(LifeCardsContainer)`
 export default function LifeSubItemPage() {
   return (
     <Container>
-      <h1>Life subitem</h1>
+      <Title>Life subitem</Title>
       <WideCardsContainer>
         <WideCard title="Problems" tasks={problemsTasks} />
         <WideCard title="Features" tasks={featuresTasks} />

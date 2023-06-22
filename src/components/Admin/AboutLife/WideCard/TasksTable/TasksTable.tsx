@@ -1,10 +1,19 @@
 import React, {useState} from 'react';
 import {Priority, Status} from '../../../../../types';
+import EditIcon from '../../../../UI/EditIcon/EditIcon';
+import DeleteIcon from '../../../../UI/DeleteIcon/DeleteIcon';
+import {ActionButton, TBody, THead, Table, Td, Th, Tr} from '../../../../UI/Table/StyledTable';
 
-type SortField = 'title' | 'priority' | 'status';
+enum SortFields {
+  Title = 'title',
+  Priority = 'priority',
+  Status = 'status',
+}
+
+type SortField = SortFields;
 
 interface Props {
-  tasks: Array<{title: string; status: Status; priority: Priority}>;
+  tasks: Array<{id: string; title: string; status: Status; priority: Priority}>;
 }
 
 export default function TasksTable({tasks}: Props) {
@@ -28,36 +37,54 @@ export default function TasksTable({tasks}: Props) {
     }
   };
 
+  const handleEditClick = (id: string) => {
+    console.log(id);
+  };
+  const handleDeleteClick = (id: string) => {
+    console.log(id);
+  };
+
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>
-            <button type="button" onClick={() => handleFilterClick('title')}>
+    <Table>
+      <THead>
+        <Tr>
+          <Th>
+            <button type="button" onClick={() => handleFilterClick(SortFields.Title)}>
               Наименование
             </button>
-          </th>
-          <th>
-            <button type="button" onClick={() => handleFilterClick('priority')}>
+          </Th>
+          <Th>
+            <button type="button" onClick={() => handleFilterClick(SortFields.Priority)}>
               Приоритет
             </button>
-          </th>
-          <th>
-            <button type="button" onClick={() => handleFilterClick('status')}>
+          </Th>
+          <Th>
+            <button type="button" onClick={() => handleFilterClick(SortFields.Status)}>
               Статус
             </button>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {sortedTasks.map(({title, status, priority}) => (
-          <tr key={title}>
-            <td>{title}</td>
-            <td>{status}</td>
-            <td>{priority}</td>
-          </tr>
+          </Th>
+          <Th colSpan={2}>Действие</Th>
+        </Tr>
+      </THead>
+      <TBody>
+        {sortedTasks.map(({id, title, status, priority}) => (
+          <Tr key={title}>
+            <Td>{title}</Td>
+            <Td>{status}</Td>
+            <Td>{priority}</Td>
+            <Td>
+              <ActionButton onClick={() => handleEditClick(id)}>
+                <EditIcon width={24} />
+              </ActionButton>
+            </Td>
+            <Td>
+              <ActionButton onClick={() => handleDeleteClick(id)}>
+                <DeleteIcon width={24} />
+              </ActionButton>
+            </Td>
+          </Tr>
         ))}
-      </tbody>
-    </table>
+      </TBody>
+    </Table>
   );
 }
