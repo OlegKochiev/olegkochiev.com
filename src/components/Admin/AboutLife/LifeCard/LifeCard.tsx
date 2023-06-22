@@ -25,7 +25,7 @@ export default function LifeCard({id, title, items}: Props) {
           <THead>
             <Tr>
               <Th>Наименование</Th>
-              <Th>Кол-во задач</Th>
+              <Th>Всего задач</Th>
               <Th>Выполнено</Th>
             </Tr>
           </THead>

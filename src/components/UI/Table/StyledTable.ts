@@ -11,6 +11,10 @@ export const Tr = styled.tr``;
 export const Th = styled.th`
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding: 5px 15px;
+  &:nth-child(1) {
+    width: 100%;
+  }
+
   @media (max-width: 700px) {
     padding: 4px;
   }
@@ -20,6 +24,9 @@ export const Td = styled.td`
   padding: 5px 15px;
   min-height: 50px;
   height: 100%;
+  &:nth-child(n + 2) {
+    text-align: center;
+  }
   @media (max-width: 700px) {
     padding: 5px;
   }
@@ -40,7 +47,7 @@ export const TBody = styled.tbody`
 export const ActionButton = styled.button.attrs({
   type: 'button',
 })`
-  padding-top: 5px;
+  padding: 5px 5px 0;
   border-radius: 5px;
   transition: background-color 0.2s;
   &:hover {

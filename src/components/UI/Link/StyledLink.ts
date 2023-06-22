@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const LinkContainer = styled.span`
-  transition: border-color 0.2s;
-  border-bottom: 1px solid transparent;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
   &:hover {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 0, 255, 0.1);
   }
 `;
