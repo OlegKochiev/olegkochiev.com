@@ -80,11 +80,12 @@ const mockData = [
   },
 ];
 
-export const Container = styled(Main)`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
+  height: 100%;
   background-image: url('/images/bg2.jpg');
   background-repeat: no-repeat;
   background-size: cover;

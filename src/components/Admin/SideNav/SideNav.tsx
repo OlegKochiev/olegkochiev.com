@@ -46,7 +46,7 @@ export default function SideNav() {
           {links.map(({title, href}) => (
             <Li key={title}>
               <Link href={href}>
-                <Span isActive={pathname === href}>{title}</Span>
+                <Span isActive={pathname.includes(href)}>{title}</Span>
               </Link>
             </Li>
           ))}

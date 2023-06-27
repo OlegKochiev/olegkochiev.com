@@ -4,6 +4,7 @@ import WideCard from '../../../../../components/Admin/AboutLife/WideCard/WideCar
 import {Priority, Status} from '../../../../../types';
 import styled from 'styled-components';
 import {Title} from '../../../../../components/Admin/AboutLife/PageTitle/StyledPageTitle';
+import AdminPageLayout from '../../../../../components/Admin/AdminPageLayout/AdminPageLayout';
 
 const problemsTasks = [
   {
@@ -49,17 +50,19 @@ const featuresTasks = [
 
 const WideCardsContainer = styled(LifeCardsContainer)`
   grid-template-columns: minmax(auto, 990px);
-  grid-auto-rows: minmax(400px, auto);
+  grid-auto-rows: minmax(300px, auto);
 `;
 
 export default function LifeSubItemPage() {
   return (
-    <Container>
-      <Title>Life subitem</Title>
-      <WideCardsContainer>
-        <WideCard title="Problems" tasks={problemsTasks} />
-        <WideCard title="Features" tasks={featuresTasks} />
-      </WideCardsContainer>
-    </Container>
+    <AdminPageLayout>
+      <Container>
+        <Title>Life subitem</Title>
+        <WideCardsContainer>
+          <WideCard title="Problems" tasks={problemsTasks} />
+          <WideCard title="Features" tasks={featuresTasks} />
+        </WideCardsContainer>
+      </Container>
+    </AdminPageLayout>
   );
 }
