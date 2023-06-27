@@ -54,4 +54,15 @@ export interface User {
   password: string;
 }
 
+export interface LifeSubitem {
+  id: string;
+  title: string;
+}
+
+export interface LifeItem {
+  id: string;
+  title: string;
+  items: Array<LifeSubitem>;
+}
+
 export type {ThemeSwitcher};

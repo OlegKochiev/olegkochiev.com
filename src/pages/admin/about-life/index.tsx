@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import LifeCard from '../../../components/Admin/AboutLife/LifeCard/LifeCard';
 import {Main} from '../../../components/PageContainer';
 import {Title} from '../../../components/Admin/AboutLife/PageTitle/StyledPageTitle';
+import AdminPageLayout from '../../../components/Admin/AdminPageLayout/AdminPageLayout';
 
 const mockData = [
   {
@@ -88,7 +89,6 @@ export const Container = styled(Main)`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  font-family: 'Nunito';
 `;
 
 export const LifeCardsContainer = styled.section`
@@ -97,8 +97,6 @@ export const LifeCardsContainer = styled.section`
   grid-template-columns: repeat(3, minmax(auto, 500px));
   grid-auto-rows: minmax(250px, auto);
   grid-gap: 20px;
-  max-width: 90vw;
-  width: 100%;
   @media (max-width: 1400px) {
     grid-template-columns: repeat(2, minmax(auto, 500px));
   }
@@ -109,13 +107,15 @@ export const LifeCardsContainer = styled.section`
 
 export default function AboutLife() {
   return (
-    <Container>
-      <Title>About Life</Title>
-      <LifeCardsContainer>
-        {mockData.map(({id, title, items}) => (
-          <LifeCard key={id} id={id} title={title} items={items} />
-        ))}
-      </LifeCardsContainer>
-    </Container>
+    <AdminPageLayout>
+      <Container>
+        <Title>About Life</Title>
+        <LifeCardsContainer>
+          {mockData.map(({id, title, items}) => (
+            <LifeCard key={id} id={id} title={title} items={items} />
+          ))}
+        </LifeCardsContainer>
+      </Container>
+    </AdminPageLayout>
   );
 }
