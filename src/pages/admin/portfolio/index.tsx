@@ -1,7 +1,8 @@
 import React from 'react';
+import AdminPageLayout from '../../../components/Admin/AdminPageLayout/AdminPageLayout';
 
-const EditPortfolio = () => {
-  return <div></div>;
+const Portfolio = () => {
+  return <AdminPageLayout>Portfolio</AdminPageLayout>;
 };
 
-export default EditPortfolio;
+export default Portfolio;

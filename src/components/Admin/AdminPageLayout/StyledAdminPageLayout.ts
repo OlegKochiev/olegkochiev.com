@@ -13,8 +13,8 @@ const Container = styled.div`
     'SideNav header'
     'SideNav main'
     'SideNav footer';
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 70px 1fr 80px;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 60px 1fr minmax(60px, auto);
 `;
 
 export {Container, Main};
