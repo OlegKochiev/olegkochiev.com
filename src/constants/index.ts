@@ -74,6 +74,15 @@ const TABS = {
   ABOUT_ME: 'aboutMe',
 };
 
+const API_URLS = {
+  WEATHER: {
+    CURRENT: 'https://api.weatherapi.com/v1/current.json',
+    FORECAST: 'https://api.weatherapi.com/v1/forecast.json',
+  },
+  CURRENCY: 'https://www.cbr.ru/lk_uio/guide/rest_api/',
+  QUOTES: 'https://api-ninjas.com/api/quotes',
+};
+
 const DEFAULT_ACTIVE_TAB = TABS.EDUCATION;
 
-export {PAGES, THEME, ERRORS, TABS, DEFAULT_ACTIVE_TAB, MEDIA_QUERIES};
+export {PAGES, THEME, ERRORS, TABS, DEFAULT_ACTIVE_TAB, MEDIA_QUERIES, API_URLS};

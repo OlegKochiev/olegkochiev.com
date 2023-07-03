@@ -7,7 +7,7 @@ import {useRouter} from 'next/router';
 
 const links = [
   {
-    title: 'Домой',
+    title: 'Главная',
     href: '/admin',
   },
   {
