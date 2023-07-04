@@ -76,8 +76,8 @@ const TABS = {
 
 const API_URLS = {
   WEATHER: {
-    CURRENT: 'https://api.weatherapi.com/v1/current.json',
-    FORECAST: 'https://api.weatherapi.com/v1/forecast.json',
+    CURRENT: 'https://api.weatherapi.com/v1/current.json?',
+    FORECAST: 'https://api.weatherapi.com/v1/forecast.json?',
   },
   CURRENCY: 'https://www.cbr.ru/lk_uio/guide/rest_api/',
   QUOTES: 'https://api-ninjas.com/api/quotes',
