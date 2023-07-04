@@ -1,5 +1,20 @@
 import {ObjectId} from 'mongoose';
 
+export interface Weather {
+  current: {
+    name: string;
+    temp: number;
+    icon: string;
+  };
+  forecast: Array<{
+    date: string;
+    maxTemp: number;
+    minTemp: number;
+    avgTemp: number;
+    icon: string;
+  }>;
+}
+
 export interface WeatherCurrent {
   location: {
     name: string;

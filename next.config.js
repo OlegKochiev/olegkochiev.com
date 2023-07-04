@@ -14,6 +14,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: ['cdn.weatherapi.com'],
+  },
 };
 
 module.exports = nextConfig;
