@@ -24,6 +24,7 @@ export const CardTitle = styled.h3`
 `;
 export const CardBody = styled.div`
   margin-top: 10px;
+  height: 100%;
 `;
 export const CardFooter = styled.div`
   margin-top: 10px;

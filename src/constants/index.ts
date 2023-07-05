@@ -79,7 +79,8 @@ const API_URLS = {
     CURRENT: 'https://api.weatherapi.com/v1/current.json?',
     FORECAST: 'https://api.weatherapi.com/v1/forecast.json?',
   },
-  CURRENCY: 'https://www.cbr.ru/lk_uio/guide/rest_api/',
+  CURRENCY: 'https://www.cbr-xml-daily.ru/latest.js',
+  COIN: 'https://api.cryptorank.io/v1/currencies?',
   QUOTES: 'https://api-ninjas.com/api/quotes',
 };
 

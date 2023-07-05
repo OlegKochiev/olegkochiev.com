@@ -80,6 +80,35 @@ export interface WeatherForecast {
   };
 }
 
+export interface CurrencyAPI {
+  rates: {
+    USD: string;
+    EUR: string;
+    GEL: string;
+    UAH: string;
+  };
+}
+export interface CoinAPI {
+  data: Array<{
+    symbol: string;
+    values: {
+      USD: {
+        price: string;
+      };
+    };
+  }>;
+}
+
+export interface Rate {
+  currency: Array<{
+    name: string;
+    price: number;
+  }>;
+  coin: Array<{
+    name: string;
+    price: number;
+  }>;
+}
 // type Status = 'done' | 'inProgress' | 'todo';
 // type Priority = 'high' | 'medium' | 'low';
 

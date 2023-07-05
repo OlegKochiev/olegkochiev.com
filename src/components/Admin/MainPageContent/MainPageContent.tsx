@@ -8,7 +8,7 @@ export default function MainPageContent() {
   return (
     <Container>
       <WeatherCard />
-      <CurrencyCard /> {/**https://www.cbr.ru/lk_uio/guide/rest_api/ */}
+      <CurrencyCard />
       <QuotesCard /> {/**https://api-ninjas.com/api/quotes */}
     </Container>
   );
