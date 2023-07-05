@@ -2,16 +2,12 @@ import {API_URLS} from '../../constants';
 import {CoinAPI, CurrencyAPI, WeatherCurrent, WeatherForecast} from '../../types';
 
 const getCurrency = async () => {
-  const CURRENCY_API_KEY = process.env.CURRENCY_API_KEY;
-  if (!CURRENCY_API_KEY) throw new Error('Не найден API ключ');
-
   const response = await fetch(API_URLS.CURRENCY, {
     next: {
       revalidate: 3600,
     },
   });
   const data: CurrencyAPI = await response.json();
-
   const currency = [
     {
       name: 'USD',
@@ -50,10 +46,8 @@ const getCoin = async () => {
       },
     }
   );
-
   const data: CoinAPI = await response.json();
   const coin = [...data.data.map((item) => ({name: item.symbol, price: item.values.USD.price}))];
-
   return coin;
 };
 
