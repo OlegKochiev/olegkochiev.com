@@ -18,6 +18,7 @@ const List = styled.ul`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 5px;
 `;
 
 const Item = styled.li`

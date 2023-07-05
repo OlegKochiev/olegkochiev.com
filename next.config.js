@@ -15,7 +15,12 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ['cdn.weatherapi.com'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'cdn.weatherapi.com',
+      },
+    ],
   },
 };
 

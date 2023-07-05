@@ -11,7 +11,12 @@ const getWeatherCurrent = async (city: string) => {
         key: WEATHER_API_KEY,
         q: city,
         aqi: 'no',
-      })
+      }),
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
   );
   const data: WeatherCurrent = await response.json();
   const weather = {
@@ -33,7 +38,12 @@ const getWeatherForecast = async (city: string, days: number) => {
         aqi: 'no',
         alerts: 'no',
         days: days.toString(),
-      })
+      }),
+    {
+      next: {
+        revalidate: 3600,
+      },
+    }
   );
   const data: WeatherForecast = await response.json();
   const weather = data.forecast.forecastday.map((foreday) => ({
