@@ -10,7 +10,6 @@ export const Card = styled.article`
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(8px);
-  color: ${THEME.GOLD.color};
   @media (max-width: 900px) {
     padding: 10px;
   }
@@ -23,9 +22,10 @@ export const Card = styled.article`
 export const CardTitle = styled.h3`
   align-self: center;
   font-size: 24px;
+  color: ${THEME.GOLD.color};
 `;
 export const CardBody = styled.div`
-  margin-top: 10px;
+  margin-top: 15px;
   height: 100%;
 `;
 export const CardFooter = styled.div`

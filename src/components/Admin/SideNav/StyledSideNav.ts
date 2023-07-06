@@ -33,7 +33,7 @@ const NavHeader = styled.div`
   border-bottom: 1px solid ${THEME.GOLD.lineColor};
 `;
 const Container = styled.div`
-  grid-area: SideNav;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   color: ${THEME.GOLD.lightShade};

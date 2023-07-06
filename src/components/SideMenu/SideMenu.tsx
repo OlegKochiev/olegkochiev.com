@@ -8,14 +8,14 @@ type Props = {
 };
 
 export default function SideMenu({isMenuOpen}: Props) {
-  const GlobalStye = createGlobalStyle`
+  const GlobalStyle = createGlobalStyle`
     body {
       overflow: ${isMenuOpen ? 'hidden' : 'scroll'};
     }
   `;
   return (
     <StyledMenuContainer isOpen={isMenuOpen}>
-      <GlobalStye />
+      <GlobalStyle />
       <StyledBackBlur isOpen={isMenuOpen}>
         <StyledMenuContent isOpen={isMenuOpen}>
           <NavLinks isHorizontal={false} />

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Theme} from '../../types';
 
-export const StyledFeedbackForm = styled.form`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 550px;
@@ -20,17 +20,17 @@ const BaseInput = styled.input<{theme: Theme}>`
   }
 `;
 
-export const StyledFormLegend = styled.legend``;
+export const FormLegend = styled.legend``;
 export const ContactsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 15px;
   width: 100%;
 `;
-export const StyledPhoneInput = styled(BaseInput)``;
-export const StyledEmailInput = styled(BaseInput)``;
-export const StyledNameInput = styled(BaseInput)``;
-export const StyledMessageTextarea = styled.textarea<{theme: Theme}>`
+export const PhoneInput = styled(BaseInput)``;
+export const EmailInput = styled(BaseInput)``;
+export const NameInput = styled(BaseInput)``;
+export const MessageTextarea = styled.textarea<{theme: Theme}>`
   width: 100%;
   min-height: 100px;
   max-height: 300px;
@@ -42,7 +42,7 @@ export const StyledMessageTextarea = styled.textarea<{theme: Theme}>`
     border-color: #078080;
   }
 `;
-export const StyledSubmitButton = styled.button`
+export const SubmitButton = styled.button`
   align-self: flex-end;
   padding: 10px;
   background-color: #078080;

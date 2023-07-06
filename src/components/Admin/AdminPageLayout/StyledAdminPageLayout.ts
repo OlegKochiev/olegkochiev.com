@@ -2,23 +2,24 @@ import styled from 'styled-components';
 import {THEME} from '../../../constants';
 
 const Main = styled.main`
-  grid-area: main;
+  flex-grow: 1;
   padding: 15px;
 `;
 
-const Container = styled.div`
-  display: grid;
-  height: 100vh;
-  font-family: 'Nunito';
-
-  grid-template-areas:
-    'SideNav header'
-    'SideNav main'
-    'SideNav footer';
-  grid-template-columns: 1fr 6fr;
-  grid-template-rows: 60px 1fr minmax(60px, auto);
-  background-color: ${THEME.GOLD.backgroundColor};
-  color: ${THEME.GOLD.darkShade};
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
-export {Container, Main};
+const Container = styled.div`
+  height: 100vh;
+  display: flex;
+  background-color: ${THEME.GOLD.backgroundColor};
+  font-family: 'Nunito';
+  color: ${THEME.GOLD.lightShade};
+`;
+
+export {Container, Main, Wrapper};

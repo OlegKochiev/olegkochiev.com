@@ -21,7 +21,6 @@ export default function QuotesCard() {
     }
     setIsLoading(false);
   }, []);
-  console.log(quote);
 
   if (isLoading || !quote) {
     return (

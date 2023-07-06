@@ -10,7 +10,7 @@ const CardsContainer = styled.div`
   @media (max-width: 1400px) {
     grid-template-columns: repeat(2, minmax(auto, 500px));
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     grid-template-columns: repeat(1, minmax(auto, 500px));
   }
 `;

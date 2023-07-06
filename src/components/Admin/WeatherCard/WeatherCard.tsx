@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react';
-import {Card, CardBody, CardFooter, CardTitle} from '../../UI/Card/StyledCard';
-import {Weather} from '../../../types';
 import Image from 'next/image';
-import {City, Container, Item, List, Temp} from './StyledCard';
 import {format} from 'date-fns';
 import {ru} from 'date-fns/locale';
+import {Card, CardBody, CardFooter, CardTitle} from '../../UI/Card/StyledCard';
+import {City, Container, Item, List, Temp} from './StyledWeatherCard';
+import {Weather} from '../../../types';
 
 export default function WeatherCard() {
   const [weather, setWeather] = useState<Weather | null>(null);

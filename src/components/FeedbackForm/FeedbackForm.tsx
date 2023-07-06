@@ -1,13 +1,13 @@
 import React, {useContext} from 'react';
 import {
   ContactsContainer,
-  StyledEmailInput,
-  StyledFeedbackForm,
-  StyledFormLegend,
-  StyledMessageTextarea,
-  StyledNameInput,
-  StyledPhoneInput,
-  StyledSubmitButton,
+  EmailInput,
+  Form,
+  FormLegend,
+  MessageTextarea,
+  NameInput,
+  PhoneInput,
+  SubmitButton,
 } from './StyledFeedbackForm';
 import {GlobalContext} from '../../context/GlobalContext';
 
@@ -19,20 +19,20 @@ export default function FeedbackForm() {
   };
 
   return (
-    <StyledFeedbackForm>
-      <StyledFormLegend>
+    <Form>
+      <FormLegend>
         Если у тебя остались вопросы, можешь задать мне их здесь, в форме для обраной связи. Просто заполни поля и нажми
         кнопку отправить:
-      </StyledFormLegend>
-      <StyledNameInput theme={theme} placeholder="ФИО" />
+      </FormLegend>
+      <NameInput theme={theme} placeholder="ФИО" type="text" />
       <ContactsContainer>
-        <StyledEmailInput theme={theme} placeholder="Email" />
-        <StyledPhoneInput theme={theme} placeholder="Номер телефона" />
+        <EmailInput theme={theme} placeholder="Email" type="email" />
+        <PhoneInput theme={theme} placeholder="Номер телефона" type="tel" />
       </ContactsContainer>
-      <StyledMessageTextarea theme={theme} placeholder="Введите Ваш вопрос.." />
-      <StyledSubmitButton type="submit" onClick={handleSubmit}>
+      <MessageTextarea theme={theme} placeholder="Введите Ваш вопрос.." />
+      <SubmitButton type="submit" onClick={handleSubmit}>
         Отправить
-      </StyledSubmitButton>
-    </StyledFeedbackForm>
+      </SubmitButton>
+    </Form>
   );
 }
