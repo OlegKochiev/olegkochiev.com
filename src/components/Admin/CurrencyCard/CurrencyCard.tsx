@@ -31,8 +31,6 @@ export default function CurrencyCard() {
     );
   }
 
-  console.log(rate);
-
   return (
     <Card>
       <CardTitle>Курс валют</CardTitle>

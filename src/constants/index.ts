@@ -91,7 +91,7 @@ const API_URLS = {
   },
   CURRENCY: 'https://www.cbr-xml-daily.ru/latest.js',
   COIN: 'https://api.cryptorank.io/v1/currencies?',
-  QUOTES: 'https://api-ninjas.com/api/quotes',
+  QUOTES: 'https://api.api-ninjas.com/v1/quotes?',
 };
 
 const DEFAULT_ACTIVE_TAB = TABS.EDUCATION;

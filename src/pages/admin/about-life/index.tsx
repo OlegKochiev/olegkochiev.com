@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import LifeCard from '../../../components/Admin/AboutLife/LifeCard/LifeCard';
-import {Main} from '../../../components/PageContainer';
-import {Title} from '../../../components/Admin/AboutLife/PageTitle/StyledPageTitle';
 import AdminPageLayout from '../../../components/Admin/AdminPageLayout/AdminPageLayout';
 import {CardsContainer} from '../../../components/UI/CardsContainer/StyledCardsContainer';
 

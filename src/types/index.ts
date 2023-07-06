@@ -98,6 +98,13 @@ export interface CoinAPI {
     };
   }>;
 }
+export interface QuoteAPI {
+  quote: string;
+  author: string;
+  category: string;
+}
+
+export interface Quote extends QuoteAPI {}
 
 export interface Rate {
   currency: Array<{

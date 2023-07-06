@@ -6,12 +6,13 @@ import QuotesCard from '../QuotesCard/QuotesCard';
 import {CardsContainer} from '../../UI/CardsContainer/StyledCardsContainer';
 
 export default function MainPageContent() {
+  
   return (
     <Container>
       <CardsContainer>
         <WeatherCard />
         <CurrencyCard />
-        <QuotesCard /> {/**https://api-ninjas.com/api/quotes */}
+        <QuotesCard />
       </CardsContainer>
     </Container>
   );
