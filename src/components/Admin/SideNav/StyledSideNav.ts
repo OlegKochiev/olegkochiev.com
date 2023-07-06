@@ -1,14 +1,16 @@
 import styled from 'styled-components';
+import {THEME} from '../../../constants';
 
 const Span = styled.span<{isActive: boolean}>`
   display: block;
   padding: 20px;
+  color: ${({isActive}) => (isActive ? THEME.GOLD.color : 'inherit')};
+  transition: background-color 0.08s;
+  border-bottom: 1px solid ${({isActive}) => (isActive ? THEME.GOLD.darkShade : 'transparent')};
   &:hover {
-    background-color: #8af;
     color: white;
+    border-bottom: 1px solid ${THEME.GOLD.darkShade};
   }
-  background-color: ${({isActive}) => (isActive ? '#078080' : 'inheirit')};
-  color: ${({isActive}) => (isActive ? 'white' : 'black')};
 `;
 const Li = styled.li``;
 const Ul = styled.ul`
@@ -28,13 +30,14 @@ const NavHeader = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #8af;
+  border-bottom: 1px solid ${THEME.GOLD.lineColor};
 `;
 const Container = styled.div`
   grid-area: SideNav;
   display: flex;
   flex-direction: column;
-  background-color: #baf;
+  color: ${THEME.GOLD.lightShade};
+  border-right: 2px solid ${THEME.GOLD.lineColor};
 `;
 
 export {Span, Li, Ul, Nav, NavHeader, NavFooter, Container};

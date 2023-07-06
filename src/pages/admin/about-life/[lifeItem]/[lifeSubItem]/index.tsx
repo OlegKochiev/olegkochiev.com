@@ -1,10 +1,11 @@
 import React from 'react';
-import {Container, LifeCardsContainer} from '../..';
+import {Container} from '../..';
 import WideCard from '../../../../../components/Admin/AboutLife/WideCard/WideCard';
 import {Priority, Status} from '../../../../../types';
 import styled from 'styled-components';
 import {Title} from '../../../../../components/Admin/AboutLife/PageTitle/StyledPageTitle';
 import AdminPageLayout from '../../../../../components/Admin/AdminPageLayout/AdminPageLayout';
+import {CardsContainer} from '../../../../../components/UI/CardsContainer/StyledCardsContainer';
 
 const problemsTasks = [
   {
@@ -48,7 +49,7 @@ const featuresTasks = [
   },
 ];
 
-const WideCardsContainer = styled(LifeCardsContainer)`
+const WideCardsContainer = styled(CardsContainer)`
   grid-template-columns: minmax(auto, 990px);
   grid-auto-rows: minmax(300px, auto);
 `;

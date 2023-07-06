@@ -4,6 +4,7 @@ import LifeCard from '../../../components/Admin/AboutLife/LifeCard/LifeCard';
 import {Main} from '../../../components/PageContainer';
 import {Title} from '../../../components/Admin/AboutLife/PageTitle/StyledPageTitle';
 import AdminPageLayout from '../../../components/Admin/AdminPageLayout/AdminPageLayout';
+import {CardsContainer} from '../../../components/UI/CardsContainer/StyledCardsContainer';
 
 const mockData = [
   {
@@ -86,36 +87,20 @@ export const Container = styled.div`
   justify-content: stretch;
   align-items: center;
   height: 100%;
-  background-image: url('/images/bg2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-`;
-
-export const LifeCardsContainer = styled.section`
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(3, minmax(auto, 500px));
-  grid-auto-rows: minmax(250px, auto);
-  grid-gap: 20px;
-  @media (max-width: 1400px) {
-    grid-template-columns: repeat(2, minmax(auto, 500px));
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(1, minmax(auto, 500px));
-  }
 `;
 
 export default function AboutLife() {
   return (
     <AdminPageLayout>
       <Container>
-        <Title>About Life</Title>
-        <LifeCardsContainer>
+        <CardsContainer>
           {mockData.map(({id, title, items}) => (
             <LifeCard key={id} id={id} title={title} items={items} />
           ))}
-        </LifeCardsContainer>
+        </CardsContainer>
       </Container>
     </AdminPageLayout>
   );

@@ -6,7 +6,6 @@ const Container = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #888;
 `;
 
 export {Container};

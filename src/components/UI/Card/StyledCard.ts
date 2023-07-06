@@ -1,16 +1,18 @@
 import styled from 'styled-components';
+import {THEME} from '../../../constants';
 export const Card = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 30px;
+  padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 15px;
+  border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(8px);
+  color: ${THEME.GOLD.color};
   @media (max-width: 900px) {
-    padding: 20px;
+    padding: 10px;
   }
 
   @media (max-width: 700px) {
@@ -20,7 +22,7 @@ export const Card = styled.article`
 
 export const CardTitle = styled.h3`
   align-self: center;
-  font-size: 18px;
+  font-size: 24px;
 `;
 export const CardBody = styled.div`
   margin-top: 10px;

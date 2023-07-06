@@ -13,6 +13,16 @@ const THEME = {
     lineColor: '#a0a0a0',
     blueColor: '#078080',
   },
+  GOLD: {
+    mode: 'gold',
+    backgroundColor: '#111113',
+    color: '#9c846b',
+    lightShade: '#ece9e6',
+
+    darkShade: '#a37b54',
+    lineColor: '#353438',
+    blueColor: '#078080',
+  },
 };
 
 const PAGES = {
