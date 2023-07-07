@@ -21,9 +21,7 @@ const getQuotes = async (category: string) => {
   );
 
   const data: Array<QuoteAPI> = await response.json();
-  console.log(data);
-
-  const quotes = data.shift();
+  const quotes = data[0];
   return quotes;
 };
 

@@ -1,6 +1,6 @@
 import {useContext} from 'react';
 import {GlobalContext} from '../../context/GlobalContext';
-import {Bar, StyledBarContainer, StyledBurgerButton} from './BurgerButton.styled';
+import {Bar, BarContainer, StyledBurgerButton} from './StyledBurgerButton';
 
 type Props = {
   isMenuOpen: boolean;
@@ -16,11 +16,11 @@ export default function BurgerButton({isMenuOpen, setIsMenuOpen}: Props) {
 
   return (
     <StyledBurgerButton onClick={handleButtonClick}>
-      <StyledBarContainer className={isMenuOpen ? 'active' : ''}>
+      <BarContainer className={isMenuOpen ? 'active' : ''}>
         <Bar theme={theme} />
         <Bar theme={theme} />
         <Bar theme={theme} />
-      </StyledBarContainer>
+      </BarContainer>
     </StyledBurgerButton>
   );
 }

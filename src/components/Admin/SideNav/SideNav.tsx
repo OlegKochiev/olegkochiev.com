@@ -4,6 +4,8 @@ import Link from 'next/link';
 import MyImage from '../../Home/MyImage';
 import DefaultButton from '../../DefaultComponents/Button';
 import {useRouter} from 'next/router';
+import {createGlobalStyle} from 'styled-components';
+import useMatchMedia from '../../../hooks/useMatchMedia';
 
 const links = [
   {
@@ -32,11 +34,16 @@ const userDate = {
   email: 'olegkochiev19@gmail.com',
 };
 
-export default function SideNav() {
+interface Props {
+  isMenuOpen: boolean;
+}
+
+export default function SideNav({isMenuOpen}: Props) {
   const {pathname} = useRouter();
+  const {isMobile} = useMatchMedia();
 
   return (
-    <Container>
+    <Container isMenuOpen={isMenuOpen} className={isMobile ? 'mobile' : ''}>
       <NavHeader>
         <MyImage width="70" />
         {userDate.email}

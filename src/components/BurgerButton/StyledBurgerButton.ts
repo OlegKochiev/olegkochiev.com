@@ -17,7 +17,7 @@ export const StyledBurgerButton = styled.button`
   align-items: center;
 `;
 
-export const StyledBarContainer = styled.span`
+export const BarContainer = styled.span`
   display: block;
   width: 33px;
   height: 22px;

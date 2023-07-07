@@ -2,13 +2,14 @@ import {useEffect, useState} from 'react';
 import Image from 'next/image';
 import {format} from 'date-fns';
 import {ru} from 'date-fns/locale';
+import useMatchMedia from '../../../hooks/useMatchMedia';
 import {Card, CardBody, CardFooter, CardTitle} from '../../UI/Card/StyledCard';
 import {City, Container, Item, List, Temp} from './StyledWeatherCard';
 import {Weather} from '../../../types';
 
 export default function WeatherCard() {
   const [weather, setWeather] = useState<Weather | null>(null);
-
+  const {isMobile} = useMatchMedia();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -44,12 +45,12 @@ export default function WeatherCard() {
           <Temp>{weather?.current.temp}°</Temp>
           <Image width={64} height={64} alt="иконка погоды" src={('http:' + weather?.current.icon) as string} />
           <List>
-            {weather?.forecast.map(({date, minTemp, maxTemp, avgTemp, icon}) => (
+            {weather?.forecast.map(({date, minTemp, maxTemp, icon}) => (
               <Item key={date}>
                 <Image width={24} height={24} src={'http:' + icon} alt="иконка дня" />
-                <time dateTime={date}>{format(new Date(date), 'cccc', {locale: ru})}</time>
-                <p>{maxTemp}°</p>
-                <p>{minTemp}°</p>
+                <time dateTime={date}>{format(new Date(date), isMobile ? 'ccc' : 'cccc', {locale: ru})}</time>
+                <p>{maxTemp} °</p>
+                <p>{minTemp} °</p>
               </Item>
             ))}
           </List>

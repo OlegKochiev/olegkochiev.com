@@ -9,7 +9,7 @@ const Main = styled.main`
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
-  overflow-y: scroll;
+  overflow: auto;
   flex-direction: column;
   justify-content: space-between;
 `;
