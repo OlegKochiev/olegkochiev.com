@@ -1,23 +1,17 @@
 import styled from 'styled-components';
 
 const Label = styled.label`
-  position: relative;
   width: 100%;
-  font-size: 11px;
   text-transform: uppercase;
 `;
 
-const CustomInput = styled.input`
+const BaseInput = styled.input`
+  padding: 10px;
+  border-radius: 4px;
   width: 100%;
-  height: 40px;
-  margin-top: 5px;
-  padding: 5px 10px;
-  font-size: 14px;
-  color: inherit;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  outline: transparent;
+  border: solid 1px ${({theme}) => theme.lineColor};
   &:focus {
+    outline: transparent;
     border-color: #078080;
   }
 `;
@@ -30,4 +24,4 @@ const ErrorMessage = styled.p`
   color: #078080;
 `;
 
-export {Label, CustomInput, ErrorMessage};
+export {Label, BaseInput, ErrorMessage};
